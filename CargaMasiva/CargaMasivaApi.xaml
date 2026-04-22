@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CargaMasivaApi" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwah="clr-namespace:UiPath.Web.Activities.Http;assembly=UiPath.Web.Activities" xmlns:uwahm="clr-namespace:UiPath.Web.Activities.Http.Models;assembly=UiPath.Web.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CargaMasivaApi" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwah="clr-namespace:UiPath.Web.Activities.Http;assembly=UiPath.Web.Activities" xmlns:uwahm="clr-namespace:UiPath.Web.Activities.Http.Models;assembly=UiPath.Web.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="UiPathEventConnector" Type="InArgument(x:String)" />
     <x:Property Name="UiPathEvent" Type="InArgument(x:String)" />
@@ -143,6 +143,11 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Web.Activities</x:String>
       <x:String>UiPath.Activities.System.Text</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>Newtonsoft.Json.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -247,59 +252,66 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="804.9999999999999,1385" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap:VirtualizedContainerService.HintSize="722.6666666666666,1668" sap2010:WorkflowViewState.IdRef="Sequence_12">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Object" Name="result" />
+      <Variable x:TypeArguments="x:String" Name="result" />
       <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="httpResponse" />
       <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="postResponse" />
+      <Variable x:TypeArguments="njl:JObject" Name="jsonResponse" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="452,79" sap2010:WorkflowViewState.IdRef="ManualTrigger_4" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452,994" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="486,78.66666666666667" sap2010:WorkflowViewState.IdRef="ManualTrigger_5" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486,1099.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="450,540" sap2010:WorkflowViewState.IdRef="Sequence_6">
-          <Sequence.Variables>
-            <Variable x:TypeArguments="x:String" Name="r" />
-          </Sequence.Variables>
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="484,644" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" OutputFileTargetFolder="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" Cookies="[New System.Collections.Generic.Dictionary(Of String, String) From {}]" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormData="[New System.Collections.Generic.Dictionary(Of String, String) From {}]" FormDataParts="[new System.Collections.Generic.List(Of UiPath.Web.Activities.Http.Models.FormDataPart) From { New TextFormDataPart(&quot;QRFACTURA&quot;, &quot;tipoOnboarding&quot;),New FileFormDataPart(&quot;C:\Temp\Datos de alta.xlsx&quot;, &quot;file&quot;) }]" Headers="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;Cookie&quot;, &quot;__uzma=1d54b734-ce22-45fe-91bc-308b616e1cd8; __uzmb=1763063185; __uzmc=29480127969594; __uzmd=1776719111; __uzme=1324&quot; },{ &quot;Authorization&quot;, &quot;Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA&quot; } }]" sap:VirtualizedContainerService.HintSize="416,480" sap2010:WorkflowViewState.IdRef="NetHttpRequest_5" InitialDelay="500" LocalFiles="[new System.Collections.Generic.List(Of System.String) From {  }]" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" OAuthToken="[&quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA&quot;]" OutputFileName="responseText.txt" Parameters="[New System.Collections.Generic.Dictionary(Of String, String) From {}]" PreferRetryAfterValue="True" ProxySetting="SystemDefault" RequestBodyType="MultipartFormData" RequestUrl="[&quot;https://connect-cert.latam.fiservapis.com/qr-latam-core/v1/api/onbo/cargaMasiva&quot;]" Result="[postResponse]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xD;&#xA;{&#xD;&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xD;&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="True" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
-            <uwah:NetHttpRequest.TimeoutInMiliseconds>
-              <InArgument x:TypeArguments="s:Nullable(x:Int32)">
-                <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000" />
-              </InArgument>
-            </uwah:NetHttpRequest.TimeoutInMiliseconds>
-          </uwah:NetHttpRequest>
+          <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="450,580" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" OutputFileTargetFolder="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" Cookies="[New Dictionary(Of String, String)() From {&#xD;&#xA;            }]" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormData="[New Dictionary(Of String, String)() From {&#xD;&#xA;            }]" FormDataParts="[New List(Of UiPath.Web.Activities.Http.Models.FormDataPart)() From {&#xD;&#xA;                New UiPath.Web.Activities.Http.Models.TextFormDataPart(&quot;QRFACTURA&quot;, &quot;tipoOnboarding&quot;),&#xD;&#xA;                New UiPath.Web.Activities.Http.Models.FileFormDataPart(&quot;C:\Temp\Datos de alta.xlsx&quot;, &quot;file&quot;)&#xD;&#xA;            }]" Headers="[New Dictionary(Of String, String)() From {&#xD;&#xA;                {&quot;Cookie&quot;, &quot;__uzma=1d54b734-ce22-45fe-91bc-308b616e1cd8; __uzmb=1763063185; __uzmc=29480127969594; __uzmd=1776719111; __uzme=1324&quot;},&#xD;&#xA;                {&quot;Authorization&quot;, &quot;Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA&quot;}&#xD;&#xA;            }]" sap:VirtualizedContainerService.HintSize="416,489.3333333333333" sap2010:WorkflowViewState.IdRef="NetHttpRequest_6" InitialDelay="500" LocalFiles="[New List(Of String)() From {&#xD;&#xA;            }]" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" OAuthToken="[&quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA&quot;]" OutputFileName="responseText.txt" Parameters="[New Dictionary(Of String, String)() From {&#xD;&#xA;            }]" PreferRetryAfterValue="True" ProxySetting="SystemDefault" RequestBodyType="MultipartFormData" RequestUrl="[&quot;https://connect-cert.latam.fiservapis.com/qr-latam-core/v1/api/onbo/cargaMasiva&quot;]" Result="[postResponse]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of HttpStatusCode) From { }]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+              <uwah:NetHttpRequest.TimeoutInMiliseconds>
+                <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+                  <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000" />
+                </InArgument>
+              </uwah:NetHttpRequest.TimeoutInMiliseconds>
+            </uwah:NetHttpRequest>
+          </Sequence>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <ActivityAction x:TypeArguments="s:Exception">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,182.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Peor es estudiar un terciario de programacion&quot;]" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,118.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;ERROR&quot;]" />
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484,94.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -308,14 +320,15 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <Assign DisplayName="Extract the text content from the HTTP response." sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Extract the text content from the HTTP response." sap:VirtualizedContainerService.HintSize="486,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:Object">[result]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">[postResponse.TextContent]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[result]" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON string to JObject" sap:VirtualizedContainerService.HintSize="486,176" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonResponse]" JsonString="[result]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486,114.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[result]" />
   </Sequence>
 </Activity>
