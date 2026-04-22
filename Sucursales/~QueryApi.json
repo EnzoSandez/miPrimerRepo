@@ -1,0 +1,1 @@
+{"model":{"path":"C:\\Users\\F5TIDD9\\OneDrive - Fiserv Corp\\Documents\\UiPath\\RPA-QR23\\Sucursales\\~QueryApi.xaml","arguments":[],"outline":{"nodeName":"Activity","items":[{"nodeName":"Sequence","items":[{"displayName":"HTTP Request","nodeName":"NetHttpRequest"},{"displayName":"Log Message","nodeName":"LogMessage"}]}]}},"lastModified":"2026-04-22T00:28:32.3903159Z"}

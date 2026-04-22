@@ -4,11 +4,12 @@
   "description": "Pruebas de conexion a Apis",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[3.3.1]",
+    "UiPath.Excel.Activities": "3.4.1",
     "UiPath.Mail.Activities": "[2.5.10]",
-    "UiPath.System.Activities": "[25.10.4]",
+    "UiPath.System.Activities": "25.12.2",
     "UiPath.Testing.Activities": "[25.10.0]",
-    "UiPath.UIAutomation.Activities": "[25.10.22]"
+    "UiPath.UIAutomation.Activities": "[25.10.22]",
+    "UiPath.WebAPI.Activities": "[2.4.0]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -50,6 +51,18 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "66f01998-1248-4ccb-a584-97d114ab4bbf",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Sucursales\\GuardarRespuestaAPI.xaml",
+      "uniqueId": "e283f3d2-38ec-4eb3-8980-09c731b45236",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CargaMasiva\\CargaMasivaApi.xaml",
+      "uniqueId": "e45bca5e-3ed1-49ca-9942-895c5b22650a",
       "input": [],
       "output": []
     }

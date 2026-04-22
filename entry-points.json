@@ -2,9 +2,64 @@
   "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
   "entryPoints": [
     {
+      "filePath": "CargaMasiva\\CargaMasivaApi.xaml",
+      "uniqueId": "e45bca5e-3ed1-49ca-9942-895c5b22650a",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "UiPathEventConnector": {
+            "type": "string"
+          },
+          "UiPathEvent": {
+            "type": "string"
+          },
+          "UiPathEventObjectType": {
+            "type": "string"
+          },
+          "UiPathEventObjectId": {
+            "type": "string"
+          },
+          "UiPathAdditionalEventData": {
+            "type": "string"
+          },
+          "responseText": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
       "filePath": "Main.xaml",
       "uniqueId": "66f01998-1248-4ccb-a584-97d114ab4bbf",
       "type": "process"
+    },
+    {
+      "filePath": "Sucursales\\GuardarRespuestaAPI.xaml",
+      "uniqueId": "e283f3d2-38ec-4eb3-8980-09c731b45236",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "UiPathEventConnector": {
+            "type": "string"
+          },
+          "UiPathEvent": {
+            "type": "string"
+          },
+          "UiPathEventObjectType": {
+            "type": "string"
+          },
+          "UiPathEventObjectId": {
+            "type": "string"
+          },
+          "UiPathAdditionalEventData": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
     }
   ]
 }
