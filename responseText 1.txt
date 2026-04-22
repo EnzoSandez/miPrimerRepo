@@ -1,1 +1,0 @@
-{"resultCode":0,"status":null,"message":null,"listOfResults":null,"object":[{"cuilCuit":"30999053522","success":false,"detalleList":["Error registrando comercio: 30999053522, Error alta CVU-Alias-Comercio en Coelsa: CUIT MAL FORMULADO"],"loteId":null}]}
