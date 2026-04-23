@@ -1,0 +1,3 @@
+﻿--------------------------------------23-04-2026--------------------------------------------------
+Se realiza funcionamiento de envió de datos de alta a endpoint /cargaMasiva.
+ TODO: Corregir que cuando arroja un 200 devuelve un ERROR.
