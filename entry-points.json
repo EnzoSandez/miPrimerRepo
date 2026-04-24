@@ -31,6 +31,58 @@
       }
     },
     {
+      "filePath": "formularios\\formularios_v2.xaml",
+      "uniqueId": "ddca179f-2a47-4bfc-b1c2-5bf51aaf78e8",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "UiPathEventConnector": {
+            "type": "string"
+          },
+          "UiPathEvent": {
+            "type": "string"
+          },
+          "UiPathEventObjectType": {
+            "type": "string"
+          },
+          "UiPathEventObjectId": {
+            "type": "string"
+          },
+          "UiPathAdditionalEventData": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "filePath": "formularios\\formularios.xaml",
+      "uniqueId": "8dd360ac-0487-44cd-9c44-abcadc736266",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "UiPathEventConnector": {
+            "type": "string"
+          },
+          "UiPathEvent": {
+            "type": "string"
+          },
+          "UiPathEventObjectType": {
+            "type": "string"
+          },
+          "UiPathEventObjectId": {
+            "type": "string"
+          },
+          "UiPathAdditionalEventData": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
       "filePath": "Main.xaml",
       "uniqueId": "66f01998-1248-4ccb-a584-97d114ab4bbf",
       "type": "process"

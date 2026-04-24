@@ -1,0 +1,45 @@
+﻿{
+  "Metadata": {
+    "Id": "30497502-25a7-4e35-bf89-19448a9437e2",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "TercerIntento",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "label": "Nombre",
+        "tableView": true,
+        "validateOn": "blur",
+        "validate": {
+          "minLength": 3,
+          "maxLength": 20
+        },
+        "key": "nombre",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Razon Social",
+        "showCharCount": true,
+        "tableView": true,
+        "key": "razonSocial",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}

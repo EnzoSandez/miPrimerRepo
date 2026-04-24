@@ -1,0 +1,21 @@
+﻿{
+  "Metadata": {
+    "Id": "d78fd2cb-c546-4550-95d4-39f84d0d720e",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "segundoIntento"
+  },
+  "Data": {
+    "components": [
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}
