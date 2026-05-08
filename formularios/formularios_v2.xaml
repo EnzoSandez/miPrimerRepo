@@ -232,7 +232,7 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="634,533.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="632,460" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="upaf:FormTaskData" Name="TaskOutput" />
     </Sequence.Variables>
@@ -242,7 +242,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ManualTrigger Result="{x:Null}" DisplayName="Iniciar el proceso manualmente." sap:VirtualizedContainerService.HintSize="450,78.66666666666667" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
-    <upaf:CreateFormTask BucketFolderPath="{x:Null}" BucketName="{x:Null}" BulkFormLayout="{x:Null}" ExternalTag="{x:Null}" FormLayout="{x:Null}" Labels="{x:Null}" TaskCatalog="{x:Null}" TimeoutMs="{x:Null}" BulkFormLayoutGuid="5609ae65-3a5c-42a4-943b-bcb26ab87cd3" DisplayName="Crear una tarea de formulario con los campos 'razon social' y 'nombre'." DynamicFormPath="formularios_v2.xaml" EnableBulkEdit="False" EnableDynamicForms="True" EnableV2="False" FormLayoutGuid="514e9ab5-1242-4d40-b33d-456c9d3abd91" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="450,432" sap2010:WorkflowViewState.IdRef="CreateFormTask_1" TaskOutput="[TaskOutput]" TaskPriority="Medium" TaskTitle="Formulario de Registro">
+    <upaf:CreateFormTask BucketFolderPath="{x:Null}" BucketName="{x:Null}" BulkFormLayout="{x:Null}" ExternalTag="{x:Null}" FormLayout="{x:Null}" Labels="{x:Null}" TaskCatalog="{x:Null}" TimeoutMs="{x:Null}" BulkFormLayoutGuid="b766ddfa-48fa-4884-9344-edea8263322a" DisplayName="Crear una tarea de formulario con los campos 'razon social' y 'nombre'." DynamicFormPath="formularios_v2.xaml" EnableBulkEdit="False" EnableDynamicForms="True" EnableV2="False" FormLayoutGuid="482d2287-fc0c-40cd-9d8e-8a17b6c9693b" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="450,358.6666666666667" sap2010:WorkflowViewState.IdRef="CreateFormTask_1" TaskOutput="[TaskOutput]" TaskPriority="Medium" TaskTitle="Formulario de Registro">
       <upaf:CreateFormTask.FormData>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </upaf:CreateFormTask.FormData>

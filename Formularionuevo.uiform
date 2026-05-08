@@ -4,10 +4,22 @@
     "Kind": "FormIo"
   },
   "DesignProperties": {
-    "Title": "Formularionuevo"
+    "Title": "Formularionuevo",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
   },
   "Data": {
     "components": [
+      {
+        "label": "CUIT",
+        "placeholder": "prueba",
+        "tableView": true,
+        "key": "cuit",
+        "type": "textfield",
+        "input": true
+      },
       {
         "type": "button",
         "label": "Submit",
