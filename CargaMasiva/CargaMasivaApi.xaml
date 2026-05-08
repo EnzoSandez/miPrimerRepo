@@ -150,6 +150,12 @@
       <x:String>Newtonsoft.Json.Serialization</x:String>
       <x:String>Microsoft</x:String>
       <x:String>Microsoft.CodeAnalysis</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -258,6 +264,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
       <AssemblyReference>Microsoft.VisualStudio.Validation</AssemblyReference>
       <AssemblyReference>Microsoft.CodeAnalysis.Features</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="632,1428.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_20">
