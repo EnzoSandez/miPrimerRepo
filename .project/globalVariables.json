@@ -1,0 +1,10 @@
+[
+  {
+    "Constant": false,
+    "Name": "transactionItem",
+    "TypeFullyQualifiedName": "UiPath.Core.QueueItem, UiPath.System.Activities, Version=25.12.2.0, Culture=neutral, PublicKeyToken=null",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": null,
+    "IsLiteral": false
+  }
+]
