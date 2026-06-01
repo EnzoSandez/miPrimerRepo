@@ -44,6 +44,10 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -103,6 +107,11 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="portSucursales" sap:VirtualizedContainerService.HintSize="782,1216.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -130,17 +139,23 @@
         <OutArgument x:TypeArguments="x:String">[body]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String" xml:space="preserve">["{""nombre"":""" &amp; datos("nombre").ToString &amp; """," &amp;
-"""direccion"":""" &amp; datos("direccion").ToString &amp; """," &amp;
-"""telefono"":""" &amp; datos("telefono").ToString &amp; """," &amp;
-"""ubicacion"":{""calle"":""" &amp; datos("calle").ToString &amp; """," &amp;
-"""altura"":""" &amp; datos("altura").ToString &amp; """," &amp;
-"""ciudad"":""" &amp; datos("ciudad").ToString &amp; """," &amp;
-"""provincia"":""" &amp; datos("provincia").ToString &amp; """," &amp;
-"""codigoPostal"":""" &amp; datos("codigoPostal").ToString &amp; """," &amp;
-"""pais"":""" &amp; datos("pais").ToString &amp; """," &amp;
-"""departamento"":""" &amp; datos("departamento").ToString &amp; """," &amp;
-"""esDepartamento"":" &amp; datos("esDepartamento").ToString.ToLower &amp; "}}"]</InArgument>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[Newtonsoft.Json.Linq.JObject.FromObject(
+    New Dictionary(Of String, Object) From {
+        {"nombre", datos("nombre")},
+        {"direccion", datos("direccion")},
+        {"telefono", datos("telefono")},
+        {"ubicacion", New Dictionary(Of String, Object) From {
+            {"calle", datos("calle")},
+            {"altura", datos("altura")},
+            {"ciudad", datos("ciudad")},
+            {"provincia", datos("provincia")},
+            {"codigoPostal", datos("codigoPostal")},
+            {"pais", datos("pais")},
+            {"departamento", datos("departamento")},
+            {"esDepartamento", datos("esDepartamento")}
+        }}
+    }
+).ToString()]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486.6666666666667,124" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[body]" />
