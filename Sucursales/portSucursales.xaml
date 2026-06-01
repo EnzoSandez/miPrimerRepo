@@ -105,6 +105,7 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="portSucursales" sap:VirtualizedContainerService.HintSize="782,1040" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="data" />
       <Variable x:TypeArguments="x:String" Name="body" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -112,7 +113,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486.6666666666667,124" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Entro a postSucursales&quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486.6666666666667,124" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[String.Join(&quot; | &quot;, data.Keys)]" />
     <Assign sap:VirtualizedContainerService.HintSize="486.6666666666667,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[body]</OutArgument>
@@ -134,7 +135,7 @@
 "}"]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486.6666666666667,124" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[String.Join(&quot;, &quot;, data.Keys)]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486.6666666666667,124" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[body]" />
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,592.6666666666666" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,490" sap2010:WorkflowViewState.IdRef="Sequence_2">
