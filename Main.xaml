@@ -272,7 +272,7 @@
         </If>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="portSucursales - Invoke Workflow File (Sucursales\portSucursales.xaml)" sap:VirtualizedContainerService.HintSize="452,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sucursales\portSucursales.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="data">[transactionItem.SpecificContent]</InArgument>
+            <InArgument x:TypeArguments="ui:QueueItem" x:Key="item">[transactionItem]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </Sequence>
