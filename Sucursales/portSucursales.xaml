@@ -139,23 +139,25 @@
         <OutArgument x:TypeArguments="x:String">[body]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String" xml:space="preserve">[Newtonsoft.Json.Linq.JObject.FromObject(
-    New Dictionary(Of String, Object) From {
-        {"nombre", datos("nombre")},
-        {"direccion", datos("direccion")},
-        {"telefono", datos("telefono")},
-        {"ubicacion", New Dictionary(Of String, Object) From {
-            {"calle", datos("calle")},
-            {"altura", datos("altura")},
-            {"ciudad", datos("ciudad")},
-            {"provincia", datos("provincia")},
-            {"codigoPostal", datos("codigoPostal")},
-            {"pais", datos("pais")},
-            {"departamento", datos("departamento")},
-            {"esDepartamento", datos("esDepartamento")}
-        }}
-    }
-).ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[Newtonsoft.Json.JsonConvert.SerializeObject(
+    Newtonsoft.Json.Linq.JObject.FromObject(
+        New Dictionary(Of String, Object) From {
+            {"nombre", datos("nombre").ToString},
+            {"direccion", datos("direccion").ToString},
+            {"telefono", datos("telefono").ToString},
+            {"ubicacion", New Dictionary(Of String, Object) From {
+                {"calle", datos("calle").ToString},
+                {"altura", datos("altura").ToString},
+                {"ciudad", datos("ciudad").ToString},
+                {"provincia", datos("provincia").ToString},
+                {"codigoPostal", datos("codigoPostal").ToString},
+                {"pais", datos("pais").ToString},
+                {"departamento", datos("departamento").ToString},
+                {"esDepartamento", CBool(datos("esDepartamento"))}
+            }}
+        }
+    )
+)]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486.6666666666667,124" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[body]" />
