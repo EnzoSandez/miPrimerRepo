@@ -105,8 +105,9 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="portSucursales" sap:VirtualizedContainerService.HintSize="782,1216.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="variable1" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="datos" />
-      <Variable x:TypeArguments="x:Object" Name="body" />
+      <Variable x:TypeArguments="x:String" Name="body" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -124,23 +125,10 @@
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="486.6666666666667,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:Object">[body]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[body]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String" xml:space="preserve">["{""nombre"":""" + datos("nombre").ToString + """," +
-"""direccion"":""" + datos("direccion").ToString + """," +
-"""telefono"":""" + datos("telefono").ToString + """," +
-"""ubicacion"":{" +
-    """calle"":""" + datos("calle").ToString + """," +
-    """altura"":""" + datos("altura").ToString + """," +
-    """ciudad"":""" + datos("ciudad").ToString + """," +
-    """provincia"":""" + datos("provincia").ToString + """," +
-    """codigoPostal"":""" + datos("codigoPostal").ToString + """," +
-    """pais"":""" + datos("pais").ToString + """," +
-    """departamento"":""" + datos("departamento").ToString + """," +
-    """esDepartamento"":" + datos("esDepartamento").ToString.ToLower +
-"}" +
-"}"]</InArgument>
+        <InArgument x:TypeArguments="x:String">["SOY EL BODY CORRECTO ✅"]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486.6666666666667,124" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[body]" />
