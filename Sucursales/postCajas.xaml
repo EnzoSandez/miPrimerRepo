@@ -186,7 +186,7 @@
         <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["https://connect.latam.fiservapis.com/qr-latam-api/v1/sucursal/" + sucursalId + "/caja"]</InArgument>
+        <InArgument x:TypeArguments="x:String">["https://connect-cert.latam.fiservapis.com/qr-latam-api/v1/sucursal/" + sucursalId + "/caja"]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_10">
