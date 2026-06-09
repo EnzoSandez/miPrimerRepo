@@ -117,7 +117,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="postSucursales" sap:VirtualizedContainerService.HintSize="769,2736" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="postSucursales" sap:VirtualizedContainerService.HintSize="769,2859" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="requestBody" />
       <Variable x:TypeArguments="x:String" Name="url" />
@@ -204,6 +204,7 @@
         </InArgument>
       </uwah:NetHttpRequest.TimeoutInMiliseconds>
     </uwah:NetHttpRequest>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="452,123" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;ejecutando http&quot;]" />
     <If Condition="[responseString.TextContent.Contains(&quot;error&quot;)]" sap:VirtualizedContainerService.HintSize="452,880" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,401" sap2010:WorkflowViewState.IdRef="Sequence_2">
