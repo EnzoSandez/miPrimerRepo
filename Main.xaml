@@ -280,12 +280,12 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Estoy en sucursales&quot;]" />
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="portSucursales - Invoke Workflow File (Sucursales\portSucursales.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sucursales\portSucursales.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="portSucursales - Invoke Workflow File (Sucursales\portSucursales.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sucursales\portSucursales.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="ui:QueueItem" x:Key="item">[transactionItem]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Estoy en sucursales&quot;]" />
                   </Sequence>
                   <Sequence x:Key="postCajas" DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,351" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
@@ -293,12 +293,12 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Estoy en cajas&quot;]" />
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="postCajas - Invoke Workflow File (Sucursales\postCajas.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Sucursales\postCajas.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="postCajas - Invoke Workflow File (Sucursales\postCajas.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Sucursales\postCajas.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="data" />
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Estoy en cajas&quot;]" />
                   </Sequence>
                 </Switch>
               </Sequence>
