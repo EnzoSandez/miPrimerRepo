@@ -120,7 +120,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="portSucursales" sap:VirtualizedContainerService.HintSize="1054,2183" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="portSucursales" sap:VirtualizedContainerService.HintSize="1054,2007.0000000000002" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="datos" />
       <Variable x:TypeArguments="x:String" Name="body" />
@@ -131,7 +131,6 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="oscar.pereyra1@fiserv.com's workspace" sap:VirtualizedContainerService.HintSize="486,176" sap2010:WorkflowViewState.IdRef="GetQueueItem_2" QueueType="SucursalQueue" TransactionItem="[transactionItem]" />
     <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="486,1470" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,1339" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -180,7 +179,7 @@
         </Sequence>
       </ui:InterruptibleWhile.Body>
       <ui:InterruptibleWhile.Condition>
-        <Literal x:TypeArguments="x:Boolean" DisplayName="Literal" Value="True" />
+        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="transactionItem IsNot Nothing" />
       </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486,123" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;paso por aca&quot;]" />
