@@ -120,7 +120,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="portSucursales" sap:VirtualizedContainerService.HintSize="769,2380" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="portSucursales" sap:VirtualizedContainerService.HintSize="1054,2380" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="datos" />
       <Variable x:TypeArguments="x:String" Name="body" />
@@ -176,7 +176,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, InArgument" />
                   </ui:SetTransactionStatus.Output>
                 </ui:SetTransactionStatus>
-                <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="Delay_2" />
                 <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="oscar.pereyra1@fiserv.com's workspace" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="GetQueueItem_4" QueueType="SucursalQueue" TransactionItem="[transactionItem]" />
               </Sequence>
             </If.Then>
