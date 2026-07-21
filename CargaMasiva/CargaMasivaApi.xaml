@@ -1,27 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CargaMasivaApi" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwah="clr-namespace:UiPath.Web.Activities.Http;assembly=UiPath.Web.Activities" xmlns:uwahm="clr-namespace:UiPath.Web.Activities.Http.Models;assembly=UiPath.Web.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CargaMasivaApi" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umamf="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Filters;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umamm="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Models;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umm="clr-namespace:UiPath.MicrosoftOffice365.Models;assembly=UiPath.MicrosoftOffice365" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:uwah="clr-namespace:UiPath.Web.Activities.Http;assembly=UiPath.Web.Activities" xmlns:uwahm="clr-namespace:UiPath.Web.Activities.Http.Models;assembly=UiPath.Web.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="UiPathEventConnector" Type="InArgument(x:String)" />
-    <x:Property Name="UiPathEvent" Type="InArgument(x:String)" />
-    <x:Property Name="UiPathEventObjectType" Type="InArgument(x:String)" />
-    <x:Property Name="UiPathEventObjectId" Type="InArgument(x:String)" />
-    <x:Property Name="UiPathAdditionalEventData" Type="InArgument(x:String)" />
     <x:Property Name="responseText" Type="InArgument(x:String)" />
   </x:Members>
-  <this:CargaMasivaApi.UiPathEventConnector>
-    <InArgument x:TypeArguments="x:String" />
-  </this:CargaMasivaApi.UiPathEventConnector>
-  <this:CargaMasivaApi.UiPathEvent>
-    <InArgument x:TypeArguments="x:String" />
-  </this:CargaMasivaApi.UiPathEvent>
-  <this:CargaMasivaApi.UiPathEventObjectType>
-    <InArgument x:TypeArguments="x:String" />
-  </this:CargaMasivaApi.UiPathEventObjectType>
-  <this:CargaMasivaApi.UiPathEventObjectId>
-    <InArgument x:TypeArguments="x:String" />
-  </this:CargaMasivaApi.UiPathEventObjectId>
-  <this:CargaMasivaApi.UiPathAdditionalEventData>
-    <InArgument x:TypeArguments="x:String" />
-  </this:CargaMasivaApi.UiPathAdditionalEventData>
   <this:CargaMasivaApi.responseText>
     <InArgument x:TypeArguments="x:String" />
   </this:CargaMasivaApi.responseText>
@@ -163,6 +143,27 @@
       <x:String>UiPath.Platform.Triggers</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
       <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Models</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Mail.Models</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -273,22 +274,73 @@
       <AssemblyReference>Microsoft.CodeAnalysis.Features</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>Fiserv.Edge.ServiceNow</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="726,1414" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="769,1793" sap2010:WorkflowViewState.IdRef="Sequence_20">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="detailsMessage" />
       <Variable x:TypeArguments="x:String" Name="result" />
       <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="httpResponse" />
       <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="postResponse" />
       <Variable x:TypeArguments="njl:JObject" Name="jsonResponse" />
+      <Variable x:TypeArguments="scg:List(umm:Office365Message)" Name="EmailListTest" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="452,79" sap2010:WorkflowViewState.IdRef="ManualTrigger_6" />
+    <umam:GetEmailListConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" FreeTextFilter="{x:Null}" Mailbox="{x:Reference __ReferenceID1}" MailboxBackup="{x:Reference __ReferenceID2}" ManualEntryFolder="{x:Null}" QueryFilter="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolder="Inbox" BrowserFolderId="AQMkAGJhZTI1MTJiLTNhZGItNDQAOGEtODAxNS02NTkyODFmNTY4ZDAALgAAAw3nbFMGTNJMk1A-FQ662WUBAKIE5alZ4flChvlJ4MXl5L0AAAIBDAAAAA==" ConnectionId="05d378c8-a29e-4338-8910-113b8e740027" DisplayName="Get Email List" EmailList="[EmailListTest]" FilterSelectionMode="ConditionBuilder" sap:VirtualizedContainerService.HintSize="452,335" sap2010:WorkflowViewState.IdRef="GetEmailListConnections_1" Importance="Any" IncludeSubfolders="False" MarkAsRead="False" MaxResults="100" OrderByDate="NewestFirst" SelectionMode="Browse" UnreadOnly="False" UseConnectionService="True" UseSharedMailbox="False" WithAttachmentsOnly="False">
+      <umam:GetEmailListConnections.Filter>
+        <umamf:MailFilterCollection LogicalOperator="And">
+          <umamf:MailFilterCollection.Filters>
+            <umamf:MailFilterElement DateValue="{x:Null}" Criteria="Subject" DateOperator="NewerThan" InStringValue="ALTA QR FACTURA" StringOperator="Contains" TypeOperator="Equals" TypeValue="Email" />
+          </umamf:MailFilterCollection.Filters>
+        </umamf:MailFilterCollection>
+      </umam:GetEmailListConnections.Filter>
+      <umam:GetEmailListConnections.FilterSelectionBackup>
+        <usau:BackupSlot x:TypeArguments="umame:FilterMode" StoredValue="ConditionBuilder">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umame:FilterMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umam:GetEmailListConnections.FilterSelectionBackup>
+      <umam:GetEmailListConnections.MailFolderArgument>
+        <umamm:MailFolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolder="{x:Null}" BrowserFolder="Inbox" BrowserFolderId="AQMkAGJhZTI1MTJiLTNhZGItNDQAOGEtODAxNS02NTkyODFmNTY4ZDAALgAAAw3nbFMGTNJMk1A-FQ662WUBAKIE5alZ4flChvlJ4MXl5L0AAAIBDAAAAA==" ConnectionKey="05d378c8-a29e-4338-8910-113b8e740027" SelectionMode="Browse">
+          <umamm:MailFolderArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" x:Name="__ReferenceID0" StoredValue="Browse">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="umame:ItemSelectionMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </umamm:MailFolderArgument.Backup>
+        </umamm:MailFolderArgument>
+      </umam:GetEmailListConnections.MailFolderArgument>
+      <umam:GetEmailListConnections.MailboxArg>
+        <umamm:MailboxArgument UseSharedMailbox="False">
+          <umamm:MailboxArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID2" StoredValue="UseISMailbox">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </umamm:MailboxArgument.Backup>
+          <umamm:MailboxArgument.SharedMailbox>
+            <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID1" />
+          </umamm:MailboxArgument.SharedMailbox>
+        </umamm:MailboxArgument>
+      </umam:GetEmailListConnections.MailboxArg>
+    </umam:GetEmailListConnections>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="452,123" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[EmailListTest]" />
     <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" Cookies="[New Dictionary(Of String, String)() From {&#xA;            }]" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormData="[New Dictionary(Of String, String)() From {&#xA;            }]" FormDataParts="[New List(Of UiPath.Web.Activities.Http.Models.FormDataPart)() From {&#xA;                New UiPath.Web.Activities.Http.Models.TextFormDataPart(&quot;QRFACTURA&quot;, &quot;tipoOnboarding&quot;),&#xA;                New UiPath.Web.Activities.Http.Models.FileFormDataPart(&quot;C:\Temp\Datos de alta.xlsx&quot;, &quot;file&quot;)&#xA;            }]" Headers="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;Authorization&quot;, &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA&quot; } }]" sap:VirtualizedContainerService.HintSize="452,485" sap2010:WorkflowViewState.IdRef="NetHttpRequest_7" InitialDelay="500" LocalFiles="[New List(Of String)() From {&#xA;            }]" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" OAuthToken="[&quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA&quot;]" Parameters="[New Dictionary(Of String, String)() From {&#xA;            }]" PreferRetryAfterValue="True" ProxySetting="SystemDefault" RequestBodyType="MultipartFormData" RequestUrl="https://connect-cert.latam.fiservapis.com/qr-latam-core/v1/api/onbo/cargaMasiva" Result="[postResponse]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of HttpStatusCode) From { }]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
       <uwah:NetHttpRequest.TimeoutInMiliseconds>
         <InArgument x:TypeArguments="s:Nullable(x:Int32)">
