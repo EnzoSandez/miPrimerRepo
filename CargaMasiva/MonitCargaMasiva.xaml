@@ -23,8 +23,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities.Files.Models</x:String>
@@ -57,6 +55,8 @@
       <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
       <x:String>UiPath.Platform.Activities</x:String>
       <x:String>UiPath.IntegrationService.Activities.SWEntities.C41CD0B148F_oneminus_signonminus_signoneminus_signchat.Bundle</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -127,18 +127,19 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
       <AssemblyReference>C41CD0B148F_oneminus.SWM8krl9OM1y9WEc2hnxZU4</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MonitCargaMasiva" sap:VirtualizedContainerService.HintSize="769,1347" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MonitCargaMasiva" sap:VirtualizedContainerService.HintSize="729,1260" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="sd:DataTable1" Name="dtClientes" />
+      <Variable x:TypeArguments="sd1:DataTable" Name="dtClientes" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umae:ReadRangeConnections x:TypeArguments="sd:DataTable1" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Datos de Alta General.xlsx" BrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" BrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" ConnectionId="6a2e79ca-7064-44c0-8021-33aa8b5f3226" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="452,342" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" IgnoreEmptyValues="False" ItemSelectionMode="Browse" Range="Hoja1" RangeMode="Sheet" ReadAs="Values" Result="[dtClientes]" TemplateBrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" TemplateBrowserDriveName="OneDrive" TemplateBrowserItemFriendlyName="Datos de Alta General.xlsx" TemplateBrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" TemplateBrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+    <umae:ReadRangeConnections x:TypeArguments="sd:DataTable1" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Datos de Alta General.xlsx" BrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" BrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" ConnectionId="6a2e79ca-7064-44c0-8021-33aa8b5f3226" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="452,342" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" IgnoreEmptyValues="True" ItemSelectionMode="Browse" Range="Hoja1" RangeMode="Sheet" ReadAs="Values" Result="[dtClientes]" TemplateBrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" TemplateBrowserDriveName="OneDrive" TemplateBrowserItemFriendlyName="Datos de Alta General.xlsx" TemplateBrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" TemplateBrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
       <umae:ReadRangeConnections.ColumnNames>
         <x:Array Type="x:String">
           <x:String>Razon Social</x:String>
@@ -189,7 +190,7 @@
         </umafm:DriveItemArgument>
       </umae:ReadRangeConnections.TemplateArgument>
     </umae:ReadRangeConnections>
-    <If Condition="[dtClientes.RowCount &gt; 0]" sap:VirtualizedContainerService.HintSize="452,510" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[dtClientes.RowCount &gt; 0]" sap:VirtualizedContainerService.HintSize="452,509" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,280" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
@@ -205,7 +206,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -214,23 +215,22 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtClientes]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="452,357" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtClientes]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="452,272" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd1:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[CurrentRow(&quot;Cuit&quot;).ToString()]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="452,114.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[dtClientes.Rows.Count.ToString()]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Funciona&quot;]" />
   </Sequence>
 </Activity>
