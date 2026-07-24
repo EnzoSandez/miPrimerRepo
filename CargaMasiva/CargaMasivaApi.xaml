@@ -307,7 +307,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="729,5209" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <Sequence sap:VirtualizedContainerService.HintSize="729,5573" sap2010:WorkflowViewState.IdRef="Sequence_20">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="cuitActual" />
       <Variable x:TypeArguments="sd1:DataTable" Name="dtNuevos" />
@@ -341,8 +341,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="524,123" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[System.IO.Path.GetDirectoryName(rutaProcesados)]" />
-    <If Condition="[System.IO.File.Exists(rutaProcesados)]" sap:VirtualizedContainerService.HintSize="524,455" sap2010:WorkflowViewState.IdRef="If_3">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="560,123" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[System.IO.Path.GetDirectoryName(rutaProcesados)]" />
+    <If Condition="[System.IO.File.Exists(rutaProcesados)]" sap:VirtualizedContainerService.HintSize="560,455" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_24">
           <sap:WorkflowViewStateService.ViewState>
@@ -370,7 +370,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <umae:ReadRangeConnections x:TypeArguments="sd:DataTable2" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Datos de Alta General.xlsx" BrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" BrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" ConnectionId="6a2e79ca-7064-44c0-8021-33aa8b5f3226" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="524,342" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" IgnoreEmptyValues="False" ItemSelectionMode="Browse" Range="Hoja1" RangeMode="Sheet" ReadAs="Values" Result="[dtClientes]" TemplateBrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" TemplateBrowserDriveName="OneDrive" TemplateBrowserItemFriendlyName="Datos de Alta General.xlsx" TemplateBrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" TemplateBrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+    <umae:ReadRangeConnections x:TypeArguments="sd:DataTable2" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Datos de Alta General.xlsx" BrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" BrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" ConnectionId="6a2e79ca-7064-44c0-8021-33aa8b5f3226" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="560,342" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" IgnoreEmptyValues="False" ItemSelectionMode="Browse" Range="Hoja1" RangeMode="Sheet" ReadAs="Values" Result="[dtClientes]" TemplateBrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" TemplateBrowserDriveName="OneDrive" TemplateBrowserItemFriendlyName="Datos de Alta General.xlsx" TemplateBrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" TemplateBrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
       <umae:ReadRangeConnections.ColumnNames>
         <x:Array Type="x:String">
           <x:String>Razon Social</x:String>
@@ -421,7 +421,7 @@
         </umafm:DriveItemArgument>
       </umae:ReadRangeConnections.TemplateArgument>
     </umae:ReadRangeConnections>
-    <Assign sap:VirtualizedContainerService.HintSize="524,175" sap2010:WorkflowViewState.IdRef="Assign_9">
+    <Assign sap:VirtualizedContainerService.HintSize="560,175" sap2010:WorkflowViewState.IdRef="Assign_9">
       <Assign.To>
         <OutArgument x:TypeArguments="sd1:DataTable">[dtNuevos]</OutArgument>
       </Assign.To>
@@ -429,7 +429,7 @@
         <InArgument x:TypeArguments="sd1:DataTable">[dtClientes.Clone()]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtClientes]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="524,1077" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtClientes]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,1077" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd1:DataRow">
           <ActivityAction.Argument>
@@ -482,25 +482,25 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="524,123" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Clientes totales en Excel: &quot; + dtClientes.Rows.Count.ToString +&#xD;&#xA;&quot; | Clientes nuevos detectados: &quot; + dtNuevos.Rows.Count.ToString +&#xD;&#xA;&quot; | CUIT nuevos: &quot; + String.Join(&quot;,&quot;, listaNuevos)]" />
-    <If Condition="[dtNuevos.Rows.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="524,2891" sap2010:WorkflowViewState.IdRef="If_5">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="560,123" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Clientes totales en Excel: &quot; + dtClientes.Rows.Count.ToString +&#xD;&#xA;&quot; | Clientes nuevos detectados: &quot; + dtNuevos.Rows.Count.ToString +&#xD;&#xA;&quot; | CUIT nuevos: &quot; + String.Join(&quot;,&quot;, listaNuevos)]" />
+    <If Condition="[dtNuevos.Rows.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="560,3255" sap2010:WorkflowViewState.IdRef="If_5">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,2587" sap2010:WorkflowViewState.IdRef="Sequence_29">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="558,2951" sap2010:WorkflowViewState.IdRef="Sequence_29">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[System.IO.File.Exists(rutaTemporal)]" sap:VirtualizedContainerService.HintSize="488,2527" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[System.IO.File.Exists(rutaTemporal)]" sap:VirtualizedContainerService.HintSize="524,2891" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,2307" sap2010:WorkflowViewState.IdRef="Sequence_22">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,2671" sap2010:WorkflowViewState.IdRef="Sequence_22">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="452,113" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[rutaTemporal]" />
-                <ueab:ExcelApplicationCard ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="452,502" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[rutaTemporal]">
+                <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="488,113" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[rutaTemporal]" />
+                <ueab:ExcelApplicationCard ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="488,502" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[rutaTemporal]">
                   <ueab:ExcelApplicationCard.Body>
                     <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                       <ActivityAction.Argument>
@@ -517,14 +517,14 @@
                     </ActivityAction>
                   </ueab:ExcelApplicationCard.Body>
                 </ueab:ExcelApplicationCard>
-                <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" Cookies="[New Dictionary(Of String, String)() From {&#xA;            }]" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormData="[New Dictionary(Of String, String)() From {&#xA;            }]" FormDataParts="[new System.Collections.Generic.List(Of UiPath.Web.Activities.Http.Models.FormDataPart) From { New UiPath.Web.Activities.Http.Models.TextFormDataPart(&quot;QRFACTURA&quot;, &quot;tipoOnboarding&quot;),New UiPath.Web.Activities.Http.Models.FileFormDataPart(rutaTemporal, &quot;file&quot;) }]" Headers="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;Authorization&quot;, &quot;Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA&quot; } }]" sap:VirtualizedContainerService.HintSize="452,485" sap2010:WorkflowViewState.IdRef="NetHttpRequest_9" InitialDelay="500" LocalFiles="[New List(Of String)() From {&#xA;            }]" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" OAuthToken="[&quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA&quot;]" Parameters="[New Dictionary(Of String, String)() From {&#xA;            }]" PreferRetryAfterValue="True" ProxySetting="SystemDefault" RequestBodyType="MultipartFormData" RequestUrl="https://connect-cert.latam.fiservapis.com/qr-latam-core/v1/api/onbo/cargaMasiva" Result="[postResponse]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of HttpStatusCode) From { }]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+                <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" Cookies="[New Dictionary(Of String, String)() From {&#xA;            }]" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormData="[New Dictionary(Of String, String)() From {&#xA;            }]" FormDataParts="[new System.Collections.Generic.List(Of UiPath.Web.Activities.Http.Models.FormDataPart) From { New UiPath.Web.Activities.Http.Models.TextFormDataPart(&quot;QRFACTURA&quot;, &quot;tipoOnboarding&quot;),New UiPath.Web.Activities.Http.Models.FileFormDataPart(rutaTemporal, &quot;file&quot;) }]" Headers="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;Authorization&quot;, &quot;Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA&quot; } }]" sap:VirtualizedContainerService.HintSize="488,485" sap2010:WorkflowViewState.IdRef="NetHttpRequest_9" InitialDelay="500" LocalFiles="[New List(Of String)() From {&#xA;            }]" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" OAuthToken="[&quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA&quot;]" Parameters="[New Dictionary(Of String, String)() From {&#xA;            }]" PreferRetryAfterValue="True" ProxySetting="SystemDefault" RequestBodyType="MultipartFormData" RequestUrl="https://connect-cert.latam.fiservapis.com/qr-latam-core/v1/api/onbo/cargaMasiva" Result="[postResponse]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of HttpStatusCode) From { }]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
                   <uwah:NetHttpRequest.TimeoutInMiliseconds>
                     <InArgument x:TypeArguments="s:Nullable(x:Int32)">
                       <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000" />
                     </InArgument>
                   </uwah:NetHttpRequest.TimeoutInMiliseconds>
                 </uwah:NetHttpRequest>
-                <Assign DisplayName="Extract the text content from the HTTP response." sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_12">
+                <Assign DisplayName="Extract the text content from the HTTP response." sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="Assign_12">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
                   </Assign.To>
@@ -532,40 +532,61 @@
                     <InArgument x:TypeArguments="x:String">[postResponse.TextContent]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <If Condition="[result.TrimStart().StartsWith(&quot;{&quot;) OrElse result.TrimStart().StartsWith(&quot;[&quot;)]" DisplayName="Check if API response is valid JSON" sap:VirtualizedContainerService.HintSize="452,858" sap2010:WorkflowViewState.IdRef="If_7">
+                <If Condition="[result.TrimStart().StartsWith(&quot;{&quot;) OrElse result.TrimStart().StartsWith(&quot;[&quot;)]" DisplayName="Check if API response is valid JSON" sap:VirtualizedContainerService.HintSize="488,1222" sap2010:WorkflowViewState.IdRef="If_7">
                   <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,545" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,909" sap2010:WorkflowViewState.IdRef="Sequence_33">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON string to JObject" sap:VirtualizedContainerService.HintSize="416,174" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_5" JsonObject="[jsonResponse]" JsonString="[result]" />
-                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="System.IO.File.AppendAllLines(rutaProcesados,listaNuevos.Distinct().ToArray())" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,197" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
-                        <ui:InvokeCode.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="rutaProcesados">[rutaProcesados]</InArgument>
-                          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="listaNuevos">[listaNuevos]</InArgument>
-                        </ui:InvokeCode.Arguments>
-                      </ui:InvokeCode>
-                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="MessageBox_14" Text="[rutaProcesados]" />
+                      <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON string to JObject" sap:VirtualizedContainerService.HintSize="452,174" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_5" JsonObject="[jsonResponse]" JsonString="[result]" />
+                      <If Condition="[Not jsonResponse(&quot;object&quot;).Any(Function(x) x(&quot;success&quot;).ToString.ToLower = &quot;false&quot;)]" sap:VirtualizedContainerService.HintSize="452,675" sap2010:WorkflowViewState.IdRef="If_8">
+                        <If.Then>
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,371" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeCode ContinueOnError="{x:Null}" Code="System.IO.File.AppendAllLines(rutaProcesados,listaNuevos.Distinct().ToArray())" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,197" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+                              <ui:InvokeCode.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="rutaProcesados">[rutaProcesados]</InArgument>
+                                <InArgument x:TypeArguments="scg:List(x:String)" x:Key="listaNuevos">[listaNuevos]</InArgument>
+                              </ui:InvokeCode.Arguments>
+                            </ui:InvokeCode>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="MessageBox_14" Text="[rutaProcesados]" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Throw Exception="[New Exception(&quot;La API devolvió errores. No se marcarán CUITs como procesados. Respuesta API: &quot; + result)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,174" sap2010:WorkflowViewState.IdRef="Sequence_34">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Throw DisplayName="Throw exception for invalid JSON" Exception="[New Exception(&quot;La respuesta de la API no es JSON válido: &quot; &amp; result)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                      <Throw DisplayName="Throw exception for invalid JSON" Exception="[New Exception(&quot;La respuesta de la API no es JSON válido: &quot; &amp; result)]" sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="Throw_3" />
                     </Sequence>
                   </If.Else>
                 </If>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[jsonResponse(&quot;object&quot;)(0)(&quot;detalleList&quot;)(0).ToString()]" />
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="488,114" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[jsonResponse(&quot;object&quot;)(0)(&quot;detalleList&quot;)(0).ToString()]" />
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,90" sap2010:WorkflowViewState.IdRef="Sequence_23">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,90" sap2010:WorkflowViewState.IdRef="Sequence_23">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -577,13 +598,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,174" sap2010:WorkflowViewState.IdRef="Sequence_30">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="558,174" sap2010:WorkflowViewState.IdRef="Sequence_30">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="488,114" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;no hay cuits nuevos&quot;]" />
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="524,114" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;no hay cuits nuevos&quot;]" />
         </Sequence>
       </If.Else>
     </If>
