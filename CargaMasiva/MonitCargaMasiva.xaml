@@ -138,7 +138,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MonitCargaMasiva" sap:VirtualizedContainerService.HintSize="647.3333333333333,2769.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MonitCargaMasiva" sap:VirtualizedContainerService.HintSize="974,3000" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Name="listaErrores">
         <Variable.Default>
@@ -161,16 +161,16 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="488,124" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[System.IO.Path.GetDirectoryName(rutaProcesados)]" />
-    <If Condition="[System.IO.File.Exists(rutaProcesados)]" sap:VirtualizedContainerService.HintSize="488,458" sap2010:WorkflowViewState.IdRef="If_2">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="488,123" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[System.IO.Path.GetDirectoryName(rutaProcesados)]" />
+    <If Condition="[System.IO.File.Exists(rutaProcesados)]" sap:VirtualizedContainerService.HintSize="488,455" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="scg:List(x:String)">[listaProcesados]</OutArgument>
             </Assign.To>
@@ -181,7 +181,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -190,15 +190,15 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[System.IO.File.Exists(rutaErrores)]" sap:VirtualizedContainerService.HintSize="488,458" sap2010:WorkflowViewState.IdRef="If_5">
+    <If Condition="[System.IO.File.Exists(rutaErrores)]" sap:VirtualizedContainerService.HintSize="488,455" sap2010:WorkflowViewState.IdRef="If_5">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_13">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="scg:List(x:String)">[listaErrores]</OutArgument>
             </Assign.To>
@@ -209,7 +209,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -218,7 +218,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <umae:ReadRangeConnections x:TypeArguments="sd:DataTable1" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Datos de Alta General.xlsx" BrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" BrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" ConnectionId="6a2e79ca-7064-44c0-8021-33aa8b5f3226" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="488,344.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_2" IgnoreEmptyValues="True" ItemSelectionMode="Browse" Range="Hoja1" RangeMode="Sheet" ReadAs="Values" Result="[dtClientes]" TemplateBrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" TemplateBrowserDriveName="OneDrive" TemplateBrowserItemFriendlyName="Datos de Alta General.xlsx" TemplateBrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" TemplateBrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+    <umae:ReadRangeConnections x:TypeArguments="sd:DataTable1" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Datos de Alta General.xlsx" BrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" BrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" ConnectionId="6a2e79ca-7064-44c0-8021-33aa8b5f3226" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="488,342" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_2" IgnoreEmptyValues="True" ItemSelectionMode="Browse" Range="Hoja1" RangeMode="Sheet" ReadAs="Values" Result="[dtClientes]" TemplateBrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" TemplateBrowserDriveName="OneDrive" TemplateBrowserItemFriendlyName="Datos de Alta General.xlsx" TemplateBrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" TemplateBrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
       <umae:ReadRangeConnections.ColumnNames>
         <x:Array Type="x:String">
           <x:String>Razon Social</x:String>
@@ -274,19 +274,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </umae:ReadRangeConnections>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtClientes]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,860" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="488,123" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;leyendoi&quot;]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtClientes]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,856" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd1:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,676" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,674" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[cuitActual]</OutArgument>
               </Assign.To>
@@ -294,15 +295,15 @@
                 <InArgument x:TypeArguments="x:String">[CurrentRow("Cuit").ToString.Trim]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[Not String.IsNullOrWhiteSpace(cuitActual) AndAlso&#xD;&#xA;Not listaProcesados.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaErrores.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaNuevos.Contains(cuitActual)]" sap:VirtualizedContainerService.HintSize="452,439.3333333333333" sap2010:WorkflowViewState.IdRef="If_4">
+            <If Condition="[Not String.IsNullOrWhiteSpace(cuitActual) AndAlso&#xD;&#xA;Not listaProcesados.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaErrores.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaNuevos.Contains(cuitActual)]" sap:VirtualizedContainerService.HintSize="452,439" sap2010:WorkflowViewState.IdRef="If_4">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,219" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="416,158" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Add">
+                  <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="416,159" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Add">
                     <InvokeMethod.TargetObject>
                       <InArgument x:TypeArguments="scg:List(x:String)">[listaNuevos]</InArgument>
                     </InvokeMethod.TargetObject>
@@ -311,7 +312,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -324,25 +325,26 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <If Condition="[listaNuevos.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="488,502" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[listaNuevos.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="488,623" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,280.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,403" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:AddQueueItem TimeoutMS="{x:Null}" ContinueOnError="False" DisplayName="Add Queue Item" FolderPath="oscar.pereyra1@fiserv.com's workspace" sap:VirtualizedContainerService.HintSize="416,220.66666666666666" sap2010:WorkflowViewState.IdRef="AddQueueItem_2" Priority="Normal" QueueType="SucursalQueue">
+          <ui:AddQueueItem TimeoutMS="{x:Null}" ContinueOnError="False" DisplayName="Add Queue Item" FolderPath="oscar.pereyra1@fiserv.com's workspace" sap:VirtualizedContainerService.HintSize="416,229" sap2010:WorkflowViewState.IdRef="AddQueueItem_2" Priority="Normal" QueueType="SucursalQueue">
             <ui:AddQueueItem.ItemInformation>
               <InArgument x:TypeArguments="x:String" x:Key="tipo">cargaMasiva</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="cantidadNuevos">[listaNuevos.Count.ToString]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="cuits">[String.Join(",", listaNuevos)]</InArgument>
             </ui:AddQueueItem.ItemInformation>
           </ui:AddQueueItem>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;encola&quot;]" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
