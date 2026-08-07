@@ -138,7 +138,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MonitCargaMasiva" sap:VirtualizedContainerService.HintSize="974,3000" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MonitCargaMasiva" sap:VirtualizedContainerService.HintSize="974,3052" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Name="listaErrores">
         <Variable.Default>
@@ -325,9 +325,9 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <If Condition="[listaNuevos.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="488,623" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[listaNuevos.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="488,675" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,403" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450.00000000000006,632" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -340,7 +340,12 @@
               <InArgument x:TypeArguments="x:String" x:Key="cuits">[String.Join(",", listaNuevos)]</InArgument>
             </ui:AddQueueItem.ItemInformation>
           </ui:AddQueueItem>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;encola&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Ingreso a Queue&quot;]" />
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Main - Invoke Workflow File (Main.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Main.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:Object" x:Key="input">[Nothing]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
         </Sequence>
       </If.Then>
       <If.Else>

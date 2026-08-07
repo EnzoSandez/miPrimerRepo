@@ -233,7 +233,7 @@
       <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="974,1926" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap:VirtualizedContainerService.HintSize="974,1912.0000000000002" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JObject" Name="jsonObj" />
       <Variable x:TypeArguments="x:String" Name="prueba" />
@@ -243,34 +243,34 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While" sap:VirtualizedContainerService.HintSize="524,1903" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While" sap:VirtualizedContainerService.HintSize="524,1889" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,1781" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,1767" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="oscar.pereyra1@fiserv.com's workspace" sap:VirtualizedContainerService.HintSize="488,176" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="SucursalQueue" TransactionItem="[GlobalVariablesNamespace.GlobalVariables.transactionItem]" />
-          <If Condition="[transactionItem is Nothing]" sap:VirtualizedContainerService.HintSize="488,1545" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[transactionItem is Nothing]" sap:VirtualizedContainerService.HintSize="488,1531" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,174" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,108" sap2010:WorkflowViewState.IdRef="Sequence_9">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                <ui:Break sap:VirtualizedContainerService.HintSize="452,48" sap2010:WorkflowViewState.IdRef="Break_1" />
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,1241" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,1293" sap2010:WorkflowViewState.IdRef="Sequence_10">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[GlobalVariablesNamespace.GlobalVariables.transactionItem.SpecificContent(&quot;tipo&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="452,1181" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[GlobalVariablesNamespace.GlobalVariables.transactionItem.SpecificContent(&quot;tipo&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="452,1233" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                   <Switch.Default>
                     <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
@@ -304,13 +304,13 @@
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
-                  <Sequence x:Key="cargaMasiva" DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,351" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence x:Key="cargaMasiva" DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,403" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;pase por aca&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Entre a cargaMasiva&quot;]" />
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CargaMasivaApi - Invoke Workflow File (CargaMasiva\CargaMasivaApi.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="CargaMasiva\CargaMasivaApi.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="responseText" />
