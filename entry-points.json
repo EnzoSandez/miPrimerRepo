@@ -68,20 +68,6 @@
       }
     },
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "66f01998-1248-4ccb-a584-97d114ab4bbf",
-      "type": "process",
-      "input": {
-        "type": "object",
-        "properties": {
-          "input": {
-            "type": "object"
-          }
-        },
-        "required": []
-      }
-    },
-    {
       "filePath": "Sucursales\\GuardarRespuestaAPI.xaml",
       "uniqueId": "e283f3d2-38ec-4eb3-8980-09c731b45236",
       "type": "process",

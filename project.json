@@ -21,7 +21,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "25.10.3.0",
-  "projectVersion": "1.0.1-alpha.72",
+  "projectVersion": "1.0.1-alpha.73",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -54,12 +54,6 @@
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
-    {
-      "filePath": "Main.xaml",
-      "uniqueId": "66f01998-1248-4ccb-a584-97d114ab4bbf",
-      "input": [],
-      "output": []
-    },
     {
       "filePath": "Sucursales\\GuardarRespuestaAPI.xaml",
       "uniqueId": "e283f3d2-38ec-4eb3-8980-09c731b45236",
