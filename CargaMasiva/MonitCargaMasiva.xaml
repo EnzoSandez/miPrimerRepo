@@ -380,7 +380,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <Delay Duration="00:05:00" sap:VirtualizedContainerService.HintSize="488,114" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="488,114" sap2010:WorkflowViewState.IdRef="Delay_4" />
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
@@ -395,7 +395,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Delay Duration="00:05:05" sap:VirtualizedContainerService.HintSize="488,114" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="488,114" sap2010:WorkflowViewState.IdRef="Delay_5" />
                   </Sequence>
                 </ActivityAction>
               </Catch>
