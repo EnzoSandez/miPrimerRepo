@@ -139,7 +139,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MonitCargaMasiva" sap:VirtualizedContainerService.HintSize="729,4248" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MonitCargaMasiva" sap:VirtualizedContainerService.HintSize="729,5460" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:TimeSpan" Default="[New TimeSpan(0, 60, 0)]" Name="intervaloRevision" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="continuarMonitor" />
@@ -150,7 +150,11 @@
       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="listaNuevos" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="listaProcesados" />
       <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), &quot;CargaMasiva&quot;, &quot;procesadosCargaMasiva.txt&quot;)]" Name="rutaProcesados" />
-      <Variable x:TypeArguments="x:String" Name="rutaEnProceso" />
+      <Variable x:TypeArguments="x:String" Name="rutaEnProceso">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="System.IO.Path.Combine(System.IO.Path.GetDirectoryName(rutaProcesados), &quot;enProcesoCargaMasiva.txt&quot;)" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="scg:List(x:String)" Name="listaEnProceso">
         <Variable.Default>
           <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New List(Of String)" />
@@ -162,17 +166,17 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[continuarMonitor]" DisplayName="While" sap:VirtualizedContainerService.HintSize="560,4225" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[continuarMonitor]" DisplayName="While" sap:VirtualizedContainerService.HintSize="560,5437" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,4103" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,5315" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="524,4043" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="524,5255" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
-              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="522,3614" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="522,4826" sap2010:WorkflowViewState.IdRef="Sequence_16">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -187,7 +191,7 @@
                   </Assign.Value>
                 </Assign>
                 <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="488,123" sap2010:WorkflowViewState.IdRef="CreateDirectory_4" Path="[System.IO.Path.GetDirectoryName(rutaProcesados)]" />
-                <If Condition="[System.IO.File.Exists(rutaProcesados)]" sap:VirtualizedContainerService.HintSize="488,455" sap2010:WorkflowViewState.IdRef="If_16">
+                <If Condition="[System.IO.File.Exists(rutaProcesados)]" sap:VirtualizedContainerService.HintSize="488,591" sap2010:WorkflowViewState.IdRef="If_16">
                   <If.Then>
                     <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_21">
                       <sap:WorkflowViewStateService.ViewState>
@@ -206,16 +210,24 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_22">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_14">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="scg:List(x:String)">[listaProcesados]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
                     </Sequence>
                   </If.Else>
                 </If>
-                <If Condition="[System.IO.File.Exists(rutaErrores)]" sap:VirtualizedContainerService.HintSize="488,455" sap2010:WorkflowViewState.IdRef="If_15">
+                <If Condition="[System.IO.File.Exists(rutaErrores)]" sap:VirtualizedContainerService.HintSize="488,591" sap2010:WorkflowViewState.IdRef="If_15">
                   <If.Then>
                     <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_23">
                       <sap:WorkflowViewStateService.ViewState>
@@ -234,12 +246,59 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_24">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_15">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="scg:List(x:String)">[listaErrores]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <If Condition="[System.IO.File.Exists(rutaEnProceso)]" sap:VirtualizedContainerService.HintSize="488,591" sap2010:WorkflowViewState.IdRef="If_18">
+                  <If.Then>
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_16">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="scg:List(x:String)">[listaEnProceso]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="scg:List(x:String)" xml:space="preserve">[System.IO.File.ReadAllLines(rutaEnProceso).
+Select(Function(x) x.Trim()).
+Where(Function(x) Not String.IsNullOrWhiteSpace(x)).
+ToList()]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_17">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="scg:List(x:String)">[listaEnProceso]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="scg:List(x:String)">[New System.Collections.Generic.List(Of String)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
                     </Sequence>
                   </If.Else>
                 </If>
@@ -319,7 +378,7 @@
                             <InArgument x:TypeArguments="x:String">[CurrentRow("Cuit").ToString.Trim]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[Not String.IsNullOrWhiteSpace(cuitActual) AndAlso&#xD;&#xA;Not listaProcesados.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaErrores.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaNuevos.Contains(cuitActual)]" sap:VirtualizedContainerService.HintSize="452,439" sap2010:WorkflowViewState.IdRef="If_17">
+                        <If Condition="[Not String.IsNullOrWhiteSpace(cuitActual) AndAlso&#xD;&#xA;Not listaProcesados.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaErrores.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaEnProceso.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaNuevos.Contains(cuitActual)]" sap:VirtualizedContainerService.HintSize="452,439" sap2010:WorkflowViewState.IdRef="If_17">
                           <If.Then>
                             <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,219" sap2010:WorkflowViewState.IdRef="Sequence_25">
                               <sap:WorkflowViewStateService.ViewState>
@@ -349,26 +408,43 @@
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
-                <If Condition="[listaNuevos.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="488,684" sap2010:WorkflowViewState.IdRef="If_14">
+                <If Condition="[listaNuevos.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="488,1033" sap2010:WorkflowViewState.IdRef="If_14">
                   <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,455" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,804" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:AddQueueItem TimeoutMS="{x:Null}" ContinueOnError="False" DisplayName="Add Queue Item" FolderPath="oscar.pereyra1@fiserv.com's workspace" sap:VirtualizedContainerService.HintSize="416,229" sap2010:WorkflowViewState.IdRef="AddQueueItem_5" Priority="Normal" QueueType="SucursalQueue">
+                      <ui:AddQueueItem TimeoutMS="{x:Null}" ContinueOnError="False" DisplayName="Add Queue Item" FolderPath="oscar.pereyra1@fiserv.com's workspace" sap:VirtualizedContainerService.HintSize="452,229" sap2010:WorkflowViewState.IdRef="AddQueueItem_5" Priority="Normal" QueueType="SucursalQueue">
                         <ui:AddQueueItem.ItemInformation>
                           <InArgument x:TypeArguments="x:String" x:Key="tipo">cargaMasiva</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="cantidadNuevos">[listaNuevos.Count.ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="cuits">[String.Join(",", listaNuevos)]</InArgument>
                         </ui:AddQueueItem.ItemInformation>
                       </ui:AddQueueItem>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Monit cargaMasiova : Ingreso a Queue&quot;]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Monit cargaMasiova : Ingreso a Queue&quot;]" />
+                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each cuitNuevo" sap:VirtualizedContainerService.HintSize="452,340" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[listaNuevos]">
+                        <ui:ForEach.Body>
+                          <ActivityAction x:TypeArguments="x:String">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:String" Name="cuitNuevo" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[rutaEnProceso]" sap:VirtualizedContainerService.HintSize="416,158" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[cuitNuevo]" UseDefaultEncoding="False" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEach.Body>
+                      </ui:ForEach>
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,90" sap2010:WorkflowViewState.IdRef="Sequence_29">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
