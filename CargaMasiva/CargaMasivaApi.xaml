@@ -307,7 +307,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="729,5864" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <Sequence sap:VirtualizedContainerService.HintSize="806,5864" sap2010:WorkflowViewState.IdRef="Sequence_20">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="C:\Users\F5TIDD9\Downloads\RPA-Frontend-Integraciones\rpa-back-integraciones\data\carga-masiva\erroresCargaMasiva.txt" Name="rutaErrores" />
       <Variable x:TypeArguments="x:String" Default="[Now.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;)]" Name="fechaInicioEjecucion" />
@@ -562,9 +562,15 @@
                     <InArgument x:TypeArguments="sd1:DataTable" x:Key="dtNuevos">
                       <VisualBasicValue x:TypeArguments="sd1:DataTable" ExpressionText="dtNuevos" />
                     </InArgument>
-                    <InArgument x:TypeArguments="scg:List(x:String)" x:Key="listaNuevos" />
-                    <InArgument x:TypeArguments="x:String" x:Key="rutaProcesados" />
-                    <InArgument x:TypeArguments="x:String" x:Key="rutaErrores" />
+                    <InArgument x:TypeArguments="scg:List(x:String)" x:Key="listaNuevos">
+                      <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="listaNuevos" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="rutaProcesados">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="rutaProcesados" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="rutaErrores">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="rutaErrores" />
+                    </InArgument>
                   </ui:InvokeCode.Arguments>
                 </ui:InvokeCode>
                 <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="522,963" sap2010:WorkflowViewState.IdRef="CommentOut_5">
