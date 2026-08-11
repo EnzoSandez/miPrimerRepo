@@ -261,7 +261,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;No ha Items disponibles.  Esperando...&quot;]" />
-                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="488,114" sap2010:WorkflowViewState.IdRef="Delay_2" />
               </Sequence>
             </If.Then>
             <If.Else>
@@ -319,7 +319,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Entre a cargaMasiva&quot;]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Main: Entre a cargaMasiva&quot;]" />
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CargaMasivaApi - Invoke Workflow File (CargaMasiva\CargaMasivaApi.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="CargaMasiva\CargaMasivaApi.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="x:String" x:Key="responseText" />

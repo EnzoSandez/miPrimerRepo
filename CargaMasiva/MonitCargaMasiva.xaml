@@ -139,18 +139,10 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MonitCargaMasiva" sap:VirtualizedContainerService.HintSize="729,4021.0000000000005" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MonitCargaMasiva" sap:VirtualizedContainerService.HintSize="729,4248" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:TimeSpan" Name="intervaloRevision">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="x:TimeSpan" ExpressionText="New TimeSpan(0, 60, 0)" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:Boolean" Name="continuarMonitor">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:TimeSpan" Default="[New TimeSpan(0, 60, 0)]" Name="intervaloRevision" />
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="continuarMonitor" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="listaErrores" />
       <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), &quot;CargaMasiva&quot;, &quot;erroresCargaMasiva.txt&quot;)]" Name="rutaErrores" />
       <Variable x:TypeArguments="sd1:DataTable" Name="dtClientes" />
@@ -158,23 +150,29 @@
       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="listaNuevos" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="listaProcesados" />
       <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), &quot;CargaMasiva&quot;, &quot;procesadosCargaMasiva.txt&quot;)]" Name="rutaProcesados" />
+      <Variable x:TypeArguments="x:String" Name="rutaEnProceso" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="listaEnProceso">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New List(Of String)" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="560,3998" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[continuarMonitor]" DisplayName="While" sap:VirtualizedContainerService.HintSize="560,4225" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,3876" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,4103" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="524,3816" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="524,4043" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
-              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="522,3387" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="522,3614" sap2010:WorkflowViewState.IdRef="Sequence_16">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -301,7 +299,6 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </umae:ReadRangeConnections>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="488,123" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;leyendoi&quot;]" />
                 <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtClientes]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,856" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd1:DataRow">
@@ -322,7 +319,7 @@
                             <InArgument x:TypeArguments="x:String">[CurrentRow("Cuit").ToString.Trim]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[Not String.IsNullOrWhiteSpace(cuitActual) AndAlso&#xA;Not listaProcesados.Contains(cuitActual) AndAlso&#xA;Not listaErrores.Contains(cuitActual) AndAlso&#xA;Not listaNuevos.Contains(cuitActual)]" sap:VirtualizedContainerService.HintSize="452,439" sap2010:WorkflowViewState.IdRef="If_17">
+                        <If Condition="[Not String.IsNullOrWhiteSpace(cuitActual) AndAlso&#xD;&#xA;Not listaProcesados.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaErrores.Contains(cuitActual) AndAlso&#xD;&#xA;Not listaNuevos.Contains(cuitActual)]" sap:VirtualizedContainerService.HintSize="452,439" sap2010:WorkflowViewState.IdRef="If_17">
                           <If.Then>
                             <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,219" sap2010:WorkflowViewState.IdRef="Sequence_25">
                               <sap:WorkflowViewStateService.ViewState>
@@ -367,7 +364,7 @@
                           <InArgument x:TypeArguments="x:String" x:Key="cuits">[String.Join(",", listaNuevos)]</InArgument>
                         </ui:AddQueueItem.ItemInformation>
                       </ui:AddQueueItem>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Ingreso a Queue&quot;]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Monit cargaMasiova : Ingreso a Queue&quot;]" />
                     </Sequence>
                   </If.Then>
                   <If.Else>
@@ -380,7 +377,9 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="488,114" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;MonitCargaMasiva : me voy a dormir&quot;]" />
+                <Delay Duration="00:00:30" sap:VirtualizedContainerService.HintSize="488,123" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;MonitCargaMasiva :  desperte&quot;]" />
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
@@ -412,9 +411,6 @@
           </TryCatch>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="continuarMonitor" />
-      </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
   </Sequence>
 </Activity>
