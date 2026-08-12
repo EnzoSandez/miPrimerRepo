@@ -307,7 +307,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="806,5864" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <Sequence sap:VirtualizedContainerService.HintSize="806,6214" sap2010:WorkflowViewState.IdRef="Sequence_20">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="C:\Users\F5TIDD9\Downloads\RPA-Frontend-Integraciones\rpa-back-integraciones\data\carga-masiva\erroresCargaMasiva.txt" Name="rutaErrores" />
       <Variable x:TypeArguments="x:String" Default="[Now.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;)]" Name="fechaInicioEjecucion" />
@@ -472,9 +472,9 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <If Condition="[dtNuevos.Rows.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="594,3669" sap2010:WorkflowViewState.IdRef="If_5">
+    <If Condition="[dtNuevos.Rows.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="594,4019" sap2010:WorkflowViewState.IdRef="If_5">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,3365" sap2010:WorkflowViewState.IdRef="Sequence_29">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,3715" sap2010:WorkflowViewState.IdRef="Sequence_29">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -525,6 +525,8 @@
               </InArgument>
             </uwah:NetHttpRequest.TimeoutInMiliseconds>
           </uwah:NetHttpRequest>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="558,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;HTTP Response Body length: &quot; + If(result Is Nothing, &quot;NULL&quot;, result.Length.ToString)]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="558,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;HTTP Response Body: &quot; + If(result Is Nothing, &quot;NULL&quot;, result)]" />
           <Assign DisplayName="Extract the text content from the HTTP response." sap:VirtualizedContainerService.HintSize="558,175" sap2010:WorkflowViewState.IdRef="Assign_13">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
