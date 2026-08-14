@@ -233,7 +233,7 @@
       <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="729,2558" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap:VirtualizedContainerService.HintSize="633,2993" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JObject" Name="jsonObj" />
       <Variable x:TypeArguments="x:String" Name="prueba" />
@@ -243,16 +243,16 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While" sap:VirtualizedContainerService.HintSize="560,2535" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While" sap:VirtualizedContainerService.HintSize="560,2970" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,2413" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,2848" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="oscar.pereyra1@fiserv.com's workspace" sap:VirtualizedContainerService.HintSize="524,176" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="SucursalQueue" TransactionItem="[GlobalVariablesNamespace.GlobalVariables.transactionItem]" />
-          <If Condition="[transactionItem is Nothing]" sap:VirtualizedContainerService.HintSize="524,2177" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[transactionItem is Nothing]" sap:VirtualizedContainerService.HintSize="524,2612" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
               <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,349" sap2010:WorkflowViewState.IdRef="Sequence_9">
                 <sap:WorkflowViewStateService.ViewState>
@@ -265,13 +265,13 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,1698" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,2133" sap2010:WorkflowViewState.IdRef="Sequence_10">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[GlobalVariablesNamespace.GlobalVariables.transactionItem.SpecificContent(&quot;tipo&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="488,1638" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[GlobalVariablesNamespace.GlobalVariables.transactionItem.SpecificContent(&quot;tipo&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="488,2073" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                   <Switch.Default>
                     <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="486,90" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
@@ -353,6 +353,19 @@
                         </Sequence>
                       </TryCatch.Finally>
                     </TryCatch>
+                  </Sequence>
+                  <Sequence x:Key="pagoQrTest" DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,403" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;entre a Pagos&quot;]" />
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="PagoQrTest - Invoke Workflow File (PagosQrTest\PagoQrTest.xaml)" sap:VirtualizedContainerService.HintSize="452,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="PagosQrTest\PagoQrTest.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
                   </Sequence>
                 </Switch>
               </Sequence>

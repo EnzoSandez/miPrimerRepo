@@ -21,7 +21,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "25.10.3.0",
-  "projectVersion": "1.0.1-alpha.93",
+  "projectVersion": "1.0.1-alpha.94",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -63,18 +63,6 @@
     {
       "filePath": "CargaMasiva\\CargaMasivaApi.xaml",
       "uniqueId": "e45bca5e-3ed1-49ca-9942-895c5b22650a",
-      "input": [],
-      "output": []
-    },
-    {
-      "filePath": "formularios\\formularios.xaml",
-      "uniqueId": "8dd360ac-0487-44cd-9c44-abcadc736266",
-      "input": [],
-      "output": []
-    },
-    {
-      "filePath": "formularios\\formularios_v2.xaml",
-      "uniqueId": "ddca179f-2a47-4bfc-b1c2-5bf51aaf78e8",
       "input": [],
       "output": []
     },
