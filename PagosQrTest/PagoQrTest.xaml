@@ -115,7 +115,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PagoQrTest" sap:VirtualizedContainerService.HintSize="551.3333333333333,11212" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PagoQrTest" sap:VirtualizedContainerService.HintSize="551.3333333333333,11388.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="mensajeSetPay" />
       <Variable x:TypeArguments="njl:JObject" Name="jsonSetPayResponse" />
@@ -230,7 +230,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[String.IsNullOrWhiteSpace(codigoQr)]" sap:VirtualizedContainerService.HintSize="524,6078" sap2010:WorkflowViewState.IdRef="If_10">
+    <If Condition="[String.IsNullOrWhiteSpace(codigoQr)]" sap:VirtualizedContainerService.HintSize="524,6254.666666666667" sap2010:WorkflowViewState.IdRef="If_10">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_24">
           <sap:WorkflowViewStateService.ViewState>
@@ -242,7 +242,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,5763.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_25">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,5940" sap2010:WorkflowViewState.IdRef="Sequence_25">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -299,6 +299,7 @@
             </Assign.Value>
           </Assign>
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_32" Level="Info" Message="[&quot;DEBUG 3 - jsonQrGetResponse parseado&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="[&quot;PagoQrTest - qr/get JSON: &quot; + jsonQrGetResponse.ToString()]" />
           <If Condition="[jsonQrGetResponse Is Nothing OrElse&#xD;&#xA;jsonQrGetResponse(&quot;resultCode&quot;) Is Nothing]" sap:VirtualizedContainerService.HintSize="488,3674" sap2010:WorkflowViewState.IdRef="If_13">
             <If.Then>
               <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_30">
@@ -317,15 +318,24 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[CInt(jsonQrGetResponse(&quot;resultCode&quot;).ToString) &lt;&gt; 0]" sap:VirtualizedContainerService.HintSize="452,3308.6666666666665" sap2010:WorkflowViewState.IdRef="If_6">
+                <If Condition="[jsonQrGetResponse Is Nothing OrElse&#xD;&#xA;jsonQrGetResponse(&quot;resultCode&quot;) Is Nothing OrElse&#xD;&#xA;jsonQrGetResponse(&quot;resultCode&quot;).Type = Newtonsoft.Json.Linq.JTokenType.Null]" sap:VirtualizedContainerService.HintSize="452,3298.666666666666" sap2010:WorkflowViewState.IdRef="If_6">
                   <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,3087.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Throw Exception="[New Exception(&quot;PagoQrTest - qr/get devolvió error: &quot; + jsonQrGetResponse(&quot;message&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_34" Level="Info" Message="[&quot;PagoQrTest - qr/get devolvió error funcional: &quot; +&#xD;&#xA;If(&#xD;&#xA;    jsonQrGetResponse(&quot;message&quot;) Is Nothing OrElse&#xD;&#xA;    jsonQrGetResponse(&quot;message&quot;).Type = Newtonsoft.Json.Linq.JTokenType.Null,&#xD;&#xA;    &quot;Sin mensaje informado&quot;,&#xD;&#xA;    jsonQrGetResponse(&quot;message&quot;).ToString()&#xD;&#xA;)]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,2963.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_15">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[idPaymentRequest]</OutArgument>
@@ -456,15 +466,6 @@
                           <InArgument x:TypeArguments="njl:JObject">[Newtonsoft.Json.Linq.JObject.Parse(paymentCreateResponse)]</InArgument>
                         </Assign.Value>
                       </Assign>
-                    </Sequence>
-                  </If.Then>
-                  <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
                     </Sequence>
                   </If.Else>
                 </If>
