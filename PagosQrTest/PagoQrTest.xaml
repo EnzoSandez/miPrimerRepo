@@ -115,7 +115,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PagoQrTest" sap:VirtualizedContainerService.HintSize="551.3333333333333,10505.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PagoQrTest" sap:VirtualizedContainerService.HintSize="551.3333333333333,11212" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="mensajeSetPay" />
       <Variable x:TypeArguments="njl:JObject" Name="jsonSetPayResponse" />
@@ -160,7 +160,7 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;PagoQRTest: iniciando simulación de pago QR&quot;]" />
     <If Condition="[GlobalVariablesNamespace.GlobalVariables.transactionItem Is Nothing]" sap:VirtualizedContainerService.HintSize="524,1449.3333333333333" sap2010:WorkflowViewState.IdRef="If_9">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_22">
+        <Sequence DisplayName="Then-Transacition Item vacio" sap:VirtualizedContainerService.HintSize="522,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_22">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -230,7 +230,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[String.IsNullOrWhiteSpace(codigoQr)]" sap:VirtualizedContainerService.HintSize="524,5371.333333333333" sap2010:WorkflowViewState.IdRef="If_10">
+    <If Condition="[String.IsNullOrWhiteSpace(codigoQr)]" sap:VirtualizedContainerService.HintSize="524,6078" sap2010:WorkflowViewState.IdRef="If_10">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_24">
           <sap:WorkflowViewStateService.ViewState>
@@ -242,7 +242,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,5056.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,5763.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_25">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -272,6 +272,7 @@
               <InArgument x:TypeArguments="x:String">["{""codigoQr"":""" + codigoQr + """}"]</InArgument>
             </Assign.Value>
           </Assign>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;DEBUG 1 - Antes de HTTP qr/get&quot;]" />
           <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" FormData="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" AuthenticationType="None" ContinueOnError="True" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA;&#x9;New FileFormDataPart(),&#xA;&#x9;New BinaryFormDataPart(),&#xA;&#x9;New TextFormDataPart()&#xA;}]" Headers="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;Authorization&quot;, tokenQrTest },{ &quot;Content-Type&quot;, &quot;application/json&quot; },{ &quot;Accept&quot;, &quot;application/json&quot; } }]" sap:VirtualizedContainerService.HintSize="488,439.3333333333333" sap2010:WorkflowViewState.IdRef="NetHttpRequest_1" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" PreferRetryAfterValue="True" RequestBodyType="Text" RequestUrl="[qrGetUrl]" Result="[qrResponseApi]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayload="[qrGetBody]" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
             <uwah:NetHttpRequest.TimeoutInMiliseconds>
               <InArgument x:TypeArguments="s:Nullable(x:Int32)">
@@ -279,6 +280,7 @@
               </InArgument>
             </uwah:NetHttpRequest.TimeoutInMiliseconds>
           </uwah:NetHttpRequest>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[&quot;DEBUG 2 - qrGetResponse extraído&quot; + qrGetResponse.ToString]" />
           <Assign DisplayName="Extract the text content from the HTTP response." sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_13">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[qrGetResponse]</OutArgument>
@@ -287,6 +289,7 @@
               <InArgument x:TypeArguments="x:String">[qrResponseApi.TextContent]</InArgument>
             </Assign.Value>
           </Assign>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;PagoQrTest - qr/get response length: &quot; +&#xD;&#xA;If(qrGetResponse Is Nothing, &quot;NULL&quot;, qrGetResponse.Length.ToString)]" />
           <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_14">
             <Assign.To>
               <OutArgument x:TypeArguments="njl:JObject">[jsonQrGetResponse]</OutArgument>
@@ -295,6 +298,7 @@
               <InArgument x:TypeArguments="njl:JObject">[Newtonsoft.Json.Linq.JObject.Parse(qrGetResponse)]</InArgument>
             </Assign.Value>
           </Assign>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_32" Level="Info" Message="[&quot;DEBUG 3 - jsonQrGetResponse parseado&quot;]" />
           <If Condition="[jsonQrGetResponse Is Nothing OrElse&#xD;&#xA;jsonQrGetResponse(&quot;resultCode&quot;) Is Nothing]" sap:VirtualizedContainerService.HintSize="488,3674" sap2010:WorkflowViewState.IdRef="If_13">
             <If.Then>
               <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_30">
