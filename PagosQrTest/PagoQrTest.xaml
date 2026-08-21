@@ -280,7 +280,7 @@
               </InArgument>
             </uwah:NetHttpRequest.TimeoutInMiliseconds>
           </uwah:NetHttpRequest>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[&quot;DEBUG 2 - qrGetResponse extraído&quot; + qrGetResponse.ToString]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[&quot;DEBUG 2 - qrGetResponse extraído&quot;]" />
           <Assign DisplayName="Extract the text content from the HTTP response." sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_13">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[qrGetResponse]</OutArgument>
