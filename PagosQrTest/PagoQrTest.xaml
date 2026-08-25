@@ -119,7 +119,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PagoQrTest" sap:VirtualizedContainerService.HintSize="551.3333333333333,7435.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PagoQrTest" sap:VirtualizedContainerService.HintSize="551.3333333333333,9464.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="rutaResultadoPagoQr" />
       <Variable x:TypeArguments="x:String" Name="rutaResultadosPagoQr" />
@@ -274,7 +274,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[String.IsNullOrWhiteSpace(codigoQr)]" sap:VirtualizedContainerService.HintSize="524,4956" sap2010:WorkflowViewState.IdRef="If_10">
+    <If Condition="[String.IsNullOrWhiteSpace(codigoQr)]" sap:VirtualizedContainerService.HintSize="524,6985.333333333333" sap2010:WorkflowViewState.IdRef="If_10">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_24">
           <sap:WorkflowViewStateService.ViewState>
@@ -286,7 +286,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,4650.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,6680" sap2010:WorkflowViewState.IdRef="Sequence_25">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -343,7 +343,7 @@
             </Assign.Value>
           </Assign>
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[&quot;DEBUG 3 - jsonQrGetResponse parseado: &quot; +&#xD;&#xA;If(&#xD;&#xA;    jsonQrGetResponse Is Nothing,&#xD;&#xA;    &quot;NULL&quot;,&#xD;&#xA;    jsonQrGetResponse.ToString()&#xD;&#xA;)]" />
-          <If Condition="[Convert.ToInt32(jsonQrGetResponse(&quot;resultCode&quot;).ToString()) &lt;&gt; 0]" sap:VirtualizedContainerService.HintSize="488,2561.3333333333335" sap2010:WorkflowViewState.IdRef="If_14">
+          <If Condition="[Convert.ToInt32(jsonQrGetResponse(&quot;resultCode&quot;).ToString()) &lt;&gt; 0]" sap:VirtualizedContainerService.HintSize="488,4590.666666666667" sap2010:WorkflowViewState.IdRef="If_14">
             <If.Then>
               <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,424.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_32">
                 <sap:WorkflowViewStateService.ViewState>
@@ -363,13 +363,13 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,2006" sap2010:WorkflowViewState.IdRef="Sequence_33">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,4035.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_33">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[jsonQrGetResponse(&quot;object&quot;) Is Nothing OrElse&#xD;&#xA;jsonQrGetResponse(&quot;object&quot;).Type &lt;&gt; Newtonsoft.Json.Linq.JTokenType.Object]" sap:VirtualizedContainerService.HintSize="452,1946" sap2010:WorkflowViewState.IdRef="If_16">
+                <If Condition="[jsonQrGetResponse(&quot;object&quot;) Is Nothing OrElse&#xD;&#xA;jsonQrGetResponse(&quot;object&quot;).Type &lt;&gt; Newtonsoft.Json.Linq.JTokenType.Object]" sap:VirtualizedContainerService.HintSize="452,3975.3333333333335" sap2010:WorkflowViewState.IdRef="If_16">
                   <If.Then>
                     <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_36">
                       <sap:WorkflowViewStateService.ViewState>
@@ -381,7 +381,7 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,1640.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,3670" sap2010:WorkflowViewState.IdRef="Sequence_37">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -455,7 +455,78 @@
 )]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;PASO A OK - Datos QR obtenidos. &quot; +&#xD;&#xA;&quot;idPaymentRequest: &quot; + idPaymentRequest.ToString() +&#xD;&#xA;&quot;, monto: &quot; + montoQr +&#xD;&#xA;&quot;, medioPago: &quot; + idTipoMedioPago.ToString()]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;PASO A OK - Datos QR obtenidos. &quot; +&#xD;&#xA;&quot;idPaymentRequest: &quot; + idPaymentRequest.ToString() +&#xD;&#xA;&quot;, monto: &quot; + montoQr +&#xD;&#xA;&quot;, medioPago: &quot; + idTipoMedioPago.ToString()]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_48">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[idMedioPago]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[5690]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_49">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[uuidPagoTest]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">["3a4da954-4f30-4846-969d-74d62b6fbb5c"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_50">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[paymentCreateUrl]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">["https://qr-cat.fiservapp.com/qr-latam-core/api/payment/create"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_51">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[paymentCreateBody]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String" xml:space="preserve">["{" +
+"""idMedioPago"":" + idMedioPago.ToString + "," +
+"""uuid"":""" + uuidPagoTest + """," +
+"""idPaymentRequest"":" + idPaymentRequest.ToString + "," +
+"""idTipoMedioPago"":" + idTipoMedioPago.ToString + "," +
+"""montoIngresable"":""" + montoQr + """," +
+"""cvu"":""" + cvuQr + """," +
+"""versionPlataforma"":{" +
+"""version"":""5.0.0""," +
+"""plataforma"":0" +
+"}" +
+"}"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[&quot;PASO B - Body payment/create: &quot; + paymentCreateBody]" />
+                      <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" FormData="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" AuthenticationType="None" ContinueOnError="True" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA;&#x9;New FileFormDataPart(),&#xA;&#x9;New BinaryFormDataPart(),&#xA;&#x9;New TextFormDataPart()&#xA;}]" Headers="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;Authorization&quot;, tokenQrTest },{ &quot;Content-Type&quot;, &quot;application/json&quot; },{ &quot;Accept&quot;, &quot;application/json&quot; } }]" sap:VirtualizedContainerService.HintSize="416,439.3333333333333" sap2010:WorkflowViewState.IdRef="NetHttpRequest_5" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" PreferRetryAfterValue="True" RequestBodyType="Text" RequestUrl="[paymentCreateUrl]" Result="[paymentCreateResponseApi]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayload="[paymentCreateBody]" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+                        <uwah:NetHttpRequest.TimeoutInMiliseconds>
+                          <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+                            <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000" />
+                          </InArgument>
+                        </uwah:NetHttpRequest.TimeoutInMiliseconds>
+                      </uwah:NetHttpRequest>
+                      <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_52">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[paymentCreateResponse]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[paymentCreateResponseApi.TextContent]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;PASO B - payment/create response: &quot; + paymentCreateResponse]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_53">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="njl:JObject">[jsonPaymentCreateResponse]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="njl:JObject" xml:space="preserve">[Newtonsoft.Json.Linq.JObject.Parse(
+paymentCreateResponse
+)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Info" Message="[&quot;PASO B OK - payment/create parseado&quot;]" />
                     </Sequence>
                   </If.Else>
                 </If>
