@@ -307,7 +307,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="724,6417.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <Sequence sap:VirtualizedContainerService.HintSize="724,6593.999999999999" sap2010:WorkflowViewState.IdRef="Sequence_20">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="C:\Users\F5TIDD9\Downloads\RPA-Frontend-Integraciones\rpa-back-integraciones\data\carga-masiva\erroresCargaMasiva.txt" Name="rutaErrores" />
       <Variable x:TypeArguments="x:String" Default="[Now.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;)]" Name="fechaInicioEjecucion" />
@@ -386,6 +386,17 @@
         </Sequence>
       </If.Else>
     </If>
+    <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_14">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[rutaTemporal]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.IO.Path.Combine(
+    "C:\Users\F5TIDD9\Downloads\RPA-Frontend-Integraciones\rpa-back-integraciones\data\carga-masiva",
+    "DatosAltaTemporal.xlsx"
+)]</InArgument>
+      </Assign.Value>
+    </Assign>
     <umae:ReadRangeConnections x:TypeArguments="sd:DataTable2" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Datos de Alta General.xlsx" BrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" BrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" ConnectionId="6a2e79ca-7064-44c0-8021-33aa8b5f3226" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="488,344.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" IgnoreEmptyValues="False" ItemSelectionMode="Browse" Range="Hoja1" RangeMode="Sheet" ReadAs="Values" Result="[dtClientes]" TemplateBrowserDriveId="b!eU0_7G2dv0K1JNyrtL9sJP7TB-zkREdOn8IICc9dI9-iyjHNn8V0TbA-0iM1L3Jf" TemplateBrowserDriveName="OneDrive" TemplateBrowserItemFriendlyName="Datos de Alta General.xlsx" TemplateBrowserItemId="01KCDORHLO2D2TUPDEW5EYTKYHD3MXTSJ6" TemplateBrowserSiteUrl="https://fiservcorp-my.sharepoint.com/personal/oscar_pereyra1_fiserv_com/_layouts/15/Doc.aspx?sourcedoc=%7B3AF5D06E-643C-49B7-89AB-071ED979C93E%7D&amp;file=Datos%20de%20Alta%20General.xlsx&amp;action=default&amp;mobileredirect=true" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
       <umae:ReadRangeConnections.ColumnNames>
         <x:Array Type="x:String">
