@@ -307,7 +307,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="599.3333333333333,6417.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <Sequence sap:VirtualizedContainerService.HintSize="724,6417.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_20">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="C:\Users\F5TIDD9\Downloads\RPA-Frontend-Integraciones\rpa-back-integraciones\data\carga-masiva\erroresCargaMasiva.txt" Name="rutaErrores" />
       <Variable x:TypeArguments="x:String" Default="[Now.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;)]" Name="fechaInicioEjecucion" />
@@ -318,7 +318,11 @@
       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="listaNuevos" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="listaProcesados" />
       <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), &quot;CargaMasiva&quot;, &quot;procesadosCargaMasiva.txt&quot;)]" Name="rutaProcesados" />
-      <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(System.IO.Path.GetTempPath(), &quot;DatosAltaTemporal.xlsx&quot;)]" Name="rutaTemporal" />
+      <Variable x:TypeArguments="x:String" Name="rutaTemporal">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\F5TIDD9\Downloads\RPA-Frontend-Integraciones\rpa-back-integraciones\data\carga-masiva\erroresCargaMasiva.txt</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="rutaArchivoCargaMasiva" />
       <Variable x:TypeArguments="x:String" Name="detailsMessage" />
       <Variable x:TypeArguments="x:String" Name="result" />
