@@ -327,16 +327,20 @@
       <Variable x:TypeArguments="njl:JObject" Name="jsonResponse" />
       <Variable x:TypeArguments="scg:List(umm:Office365Message)" Name="EmailListTest" />
       <Variable x:TypeArguments="sd:DataTable2" Name="dtClientes" />
-      <Variable x:TypeArguments="x:String" Default="Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0MTA3OSIsImlhdCI6MTc1ODgzMjg4MywiZXhwIjoxNzkwMzY4ODgzLCJBUFBfVkVSU0lPTiI6IjQuOS4yIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYzhjMzgzOWItMTFlYS0zMGUyLWEzYTItZGE3ZjUyZDkxOWRhIn0.1OnIQOp-PO_ZapJNWOFyd-YFBsG7yBHn4vE2OETTE553UTzEOh_JsRPyohZkM2YUEBNQhVKYJaz0gfwphbz_FQ" Name="TokenProd" />
-      <Variable x:TypeArguments="x:String" Default="https://connect-cert.latam.fiservapis.com/qr-latam-core/v1/api/onbo/cargaMasiva" Name="urlTest" />
-      <Variable x:TypeArguments="x:String" Default="Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzU4ODMxNzc4LCJleHAiOjE3OTAzNjc3NzgsIkFQUF9WRVJTSU9OIjoiMS4wIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjoxLCJVVUlEIjoiYmY0MjM4YzEtZWJiYy0zNmRkLTgwMTAtMDA4Yzk2NzU1ZTFhIn0.PIS7xBOvKtaluBAF18LOdGxMuY-uEF5lwi-EqgGc1_Z7wABHZYyzfSFHJENRAlV_YiuezZuxwwmo4TYub_sHVA" Name="TokenTest" />
-      <Variable x:TypeArguments="x:String" Default="https://connect.latam.fiservapis.com/qr-latam-core/v1/api/onbo/cargaMasiva" Name="urlProd" />
-      <Variable x:TypeArguments="x:String" Default="__uzma=85d98456-b304-4412-b751-abe86638035c; __uzmb=1779288718; __uzmc=1706742131292; __uzmd=1788964877; __uzme=7975" Name="cookieProd" />
-      <Variable x:TypeArguments="x:String" Name="Cokkieprod">
+      <Variable x:TypeArguments="x:String" Name="TokenProd">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">__uzma=85d98456-b304-4412-b751-abe86638035c; __uzmb=1779288718; __uzmc=1706742131292; __uzmd=1788964877; __uzme=7975</Literal>
+          <Literal x:TypeArguments="x:String">Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0MTA3OSIsImlhdCI6MTc5MDE3MjcwMiwiZXhwIjoxODIxNzA4NzAyLCJBUFBfVkVSU0lPTiI6InVuZGVmaW5lZCIsIkFTT0NJQURPIjpmYWxzZSwiUExBVEZPUk1fQ09ERSI6MCwiVVVJRCI6IjI2ZDM4YzA5LWRmMDAtM2JhNi1iNWE2LTM3OWE2YjFjZTIxMyJ9.CRJoBYfQuuEj892sNBOvYdUuVkcSMml5ih8_kDf8R-xBW6_TosbumDZSF05HgHOQwmZO-_i1Za08gKrmcdbedA</Literal>
         </Variable.Default>
       </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://connect-cert.latam.fiservapis.com/qr-latam-core/v1/api/onbo/cargaMasiva" Name="urlTest" />
+      <Variable x:TypeArguments="x:String" Name="TokenTest">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MzI1IiwiaWF0IjoxNzkwMTcyMjM1LCJleHAiOjE4MjE3MDgyMzUsIkFQUF9WRVJTSU9OIjoidW5kZWZpbmVkIiwiQVNPQ0lBRE8iOmZhbHNlLCJQTEFURk9STV9DT0RFIjowLCJVVUlEIjoiOWVlYzk5YzYtMWExZi0zNWViLWFmMDAtMzk0NzJiNmRiYzUzIn0.rWdCByC3j-nm0YEYNkV_hmAuWn7LEYyjGYYVoQ3ZcpalhNPevcC39fszYSILAxdNO1_adbS_a2DRREDexfhL5Q</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://connect.latam.fiservapis.com/qr-latam-core/v1/api/onbo/cargaMasiva" Name="urlProd" />
+      <Variable x:TypeArguments="x:String" Default="__uzma=85d98456-b304-4412-b751-abe86638035c; __uzmb=1779288718; __uzmc=1706742131292; __uzmd=1788964877; __uzme=7975" Name="cookieProd" />
+      <Variable x:TypeArguments="x:String" Default="__uzma=85d98456-b304-4412-b751-abe86638035c; __uzmb=1779288718; __uzmc=1706742131292; __uzmd=1788964877; __uzme=7975" Name="Cokkieprod" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
