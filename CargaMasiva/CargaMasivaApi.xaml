@@ -327,11 +327,7 @@
       <Variable x:TypeArguments="njl:JObject" Name="jsonResponse" />
       <Variable x:TypeArguments="scg:List(umm:Office365Message)" Name="EmailListTest" />
       <Variable x:TypeArguments="sd:DataTable2" Name="dtClientes" />
-      <Variable x:TypeArguments="x:String" Name="TokenProd">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0MTA3OSIsImlhdCI6MTc5MDE3MjcwMiwiZXhwIjoxODIxNzA4NzAyLCJBUFBfVkVSU0lPTiI6InVuZGVmaW5lZCIsIkFTT0NJQURPIjpmYWxzZSwiUExBVEZPUk1fQ09ERSI6MCwiVVVJRCI6IjI2ZDM4YzA5LWRmMDAtM2JhNi1iNWE2LTM3OWE2YjFjZTIxMyJ9.CRJoBYfQuuEj892sNBOvYdUuVkcSMml5ih8_kDf8R-xBW6_TosbumDZSF05HgHOQwmZO-_i1Za08gKrmcdbedA</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0MTA3OSIsImlhdCI6MTc5MDE3MjcwMiwiZXhwIjoxODIxNzA4NzAyLCJBUFBfVkVSU0lPTiI6InVuZGVmaW5lZCIsIkFTT0NJQURPIjpmYWxzZSwiUExBVEZPUk1fQ09ERSI6MCwiVVVJRCI6IjI2ZDM4YzA5LWRmMDAtM2JhNi1iNWE2LTM3OWE2YjFjZTIxMyJ9.CRJoBYfQuuEj892sNBOvYdUuVkcSMml5ih8_kDf8R-xBW6_TosbumDZSF05HgHOQwmZO-_i1Za08gKrmcdbedA" Name="TokenProd" />
       <Variable x:TypeArguments="x:String" Default="https://connect-cert.latam.fiservapis.com/qr-latam-core/v1/api/onbo/cargaMasiva" Name="urlTest" />
       <Variable x:TypeArguments="x:String" Name="TokenTest">
         <Variable.Default>
