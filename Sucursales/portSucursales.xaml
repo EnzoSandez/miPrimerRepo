@@ -120,7 +120,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="portSucursales" sap:VirtualizedContainerService.HintSize="583.3333333333333,2078" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="portSucursales" sap:VirtualizedContainerService.HintSize="583.3333333333333,2130.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="datos" />
       <Variable x:TypeArguments="x:String" Name="body" />
@@ -131,9 +131,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[transactionItem IsNot Nothing]" DisplayName="While" sap:VirtualizedContainerService.HintSize="486,1659.3333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[transactionItem IsNot Nothing]" DisplayName="While" sap:VirtualizedContainerService.HintSize="486,1712" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,1527.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,1580" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="variable1" />
             <Variable x:TypeArguments="x:String" Name="currentBody" />
@@ -143,7 +143,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,1467.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,1520" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -165,7 +165,7 @@
                 </InArgument>
               </uwah:NetHttpRequest.TimeoutInMiliseconds>
             </uwah:NetHttpRequest>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;body actual&quot; +currentBody]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;sucursal creada&quot;]" />
             <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_4" Status="Successful" TransactionItem="[transactionItem]">
               <ui:SetTransactionStatus.Analytics>
                 <scg:Dictionary x:TypeArguments="x:String, InArgument" />
