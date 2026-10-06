@@ -117,7 +117,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="postSucursales" sap:VirtualizedContainerService.HintSize="724,3468.0000000000005" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="postSucursales" sap:VirtualizedContainerService.HintSize="583.3333333333333,3520.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="requestUrlCaja" />
       <Variable x:TypeArguments="x:String" Name="requestBody" />
@@ -216,7 +216,7 @@
         </InArgument>
       </uwah:NetHttpRequest.TimeoutInMiliseconds>
     </uwah:NetHttpRequest>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="452,124" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;ejecutando http&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[responseString]" />
     <If Condition="[responseString.TextContent.Contains(&quot;error&quot;)]" sap:VirtualizedContainerService.HintSize="452,762" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,404" sap2010:WorkflowViewState.IdRef="Sequence_2">
