@@ -117,7 +117,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="postSucursales" sap:VirtualizedContainerService.HintSize="724,2938" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="postSucursales" sap:VirtualizedContainerService.HintSize="724,3114.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="requestBody" />
       <Variable x:TypeArguments="x:String" Name="url" />
@@ -166,6 +166,7 @@
         <InArgument x:TypeArguments="x:String">[jsonObj("sucursalId").ToString]</InArgument>
       </Assign.Value>
     </Assign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[sucursalId]" />
     <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[nombre]</OutArgument>
