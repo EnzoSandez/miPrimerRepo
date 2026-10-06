@@ -117,8 +117,9 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="postSucursales" sap:VirtualizedContainerService.HintSize="583.3333333333333,3697.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="postSucursales" sap:VirtualizedContainerService.HintSize="583.3333333333333,3874" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="resultCajasApi" />
       <Variable x:TypeArguments="x:String" Name="requestUrlCaja" />
       <Variable x:TypeArguments="x:String" Name="requestBody" />
       <Variable x:TypeArguments="x:String" Name="url" />
@@ -128,6 +129,7 @@
       <Variable x:TypeArguments="x:String" Name="body" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="datos" />
       <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="responseString" />
+      <Variable x:TypeArguments="x:String" Name="responseCajas" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -216,7 +218,15 @@
         </InArgument>
       </uwah:NetHttpRequest.TimeoutInMiliseconds>
     </uwah:NetHttpRequest>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Status Code: &quot; + responseString.StatusCode.ToString()]" />
+    <Assign DisplayName="Extract the text content from the HTTP response." sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_13">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[responseCajas]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[responseString.TextContent]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[responseCajas]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Response Body: &quot; + responseString.TextContent]" />
     <If Condition="[responseString.TextContent.Contains(&quot;error&quot;)]" sap:VirtualizedContainerService.HintSize="452,762" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
