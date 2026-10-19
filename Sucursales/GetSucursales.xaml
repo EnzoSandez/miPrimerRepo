@@ -111,7 +111,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetSucursales" sap:VirtualizedContainerService.HintSize="724,1052.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetSucursales" sap:VirtualizedContainerService.HintSize="583.3333333333333,928.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="getResponse" />
       <Variable x:TypeArguments="x:String" Name="result" />
@@ -138,7 +138,7 @@
         <InArgument x:TypeArguments="x:String">[getResponse.TextContent]</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[result.TrimStart().StartsWith(&quot;{&quot;) OrElse result.TrimStart().StartsWith(&quot;[&quot;)]" DisplayName="Check if API response is valid JSON" sap:VirtualizedContainerService.HintSize="452,457.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[result.TrimStart().StartsWith(&quot;{&quot;) OrElse result.TrimStart().StartsWith(&quot;[&quot;)]" DisplayName="Check if API response is valid JSON" sap:VirtualizedContainerService.HintSize="452,448" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,143" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -160,6 +160,5 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="452,114.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[jsonResult.ToString(Newtonsoft.Json.Formatting.Indented)]" />
   </Sequence>
 </Activity>
