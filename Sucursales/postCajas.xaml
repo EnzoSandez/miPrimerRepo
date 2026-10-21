@@ -244,7 +244,7 @@
               <scg:Dictionary x:TypeArguments="x:String, InArgument" />
             </ui:SetTransactionStatus.Output>
           </ui:SetTransactionStatus>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error" Message="[&quot;error creando cajas&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error" Message="[&quot;Error creando cajas&quot;]" />
         </Sequence>
       </If.Then>
       <If.Else>
